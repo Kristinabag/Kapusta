@@ -1,10 +1,20 @@
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      App
-    </div>
+    <>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            Главная страница
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
