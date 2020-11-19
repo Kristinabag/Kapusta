@@ -26,14 +26,14 @@ function Weather() {
   }
 
   useEffect(() => {
-    fetch(`${api.baseurl}weather?q=${city}&units=metric&appid=${api.key}`)
+    fetch(`${api.baseurl}weather?q=${city}&units=metric&appid=${api.key}&lang=ru`)
       .then((res) => res.json())
       .then((data) => {
         console.log('Вся инофрмация погоды', data);
         const d = new Date();
         setDate(dateBuilder(d));
         setTemp(Math.round(data.main.temp));
-        setWeatherState(data.weather[0].main);
+        setWeatherState(data.weather[0].description);
         setLow(Math.round(data.main.temp_min));
         setHigh(Math.round(data.main.temp_max));
       })
