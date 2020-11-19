@@ -1,13 +1,50 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  all: unset;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  border: solid 1px black;
+  flex-grow:1;
+}
+
+.Weather {
+  border: solid 1px black;
+  flex-grow:1;
+}
+
+.mainComponent {
+  display: flex;
+  flex-grow:10;
+}
+
+.ControlPanel {
+  flex-grow:1;
+  background-color: rgb(168, 240, 140);
+  border: solid 1px black;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.SelectionMenu {
+  flex-grow:1;
+  background-color: khaki;
+  border: solid 1px black;
+}
+
+.Clothes {
+  flex-grow:1;
+  background-color: oldlace;
+  border: solid 1px black;
+}
+
+.footer {
+  background-color: rgb(218, 170, 246);
+  border: solid 1px black;
+  flex-grow:1;
 }
