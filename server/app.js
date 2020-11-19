@@ -11,13 +11,13 @@ mongoose.connect(process.env.DB, {
   useCreateIndex: true,
 });
 
+const indexRouter = require('./routes/index');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('Hello');
-});
+app.use('/', indexRouter);
 
 app.listen(process.env.PORT || 3000);
 

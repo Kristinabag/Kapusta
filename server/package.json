@@ -9,7 +9,11 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.15"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
   "scripts": {
     "start": "node app.js"
   },
