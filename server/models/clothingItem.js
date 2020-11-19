@@ -18,6 +18,10 @@ const clothingItemSchema = new mongoose.Schema({
     ref: 'Activity',
     // required: true,
   }],
+  temperatureFor: [{
+    type: String,
+    required: true,
+  }],
   imgUrl: String,
 });
 
