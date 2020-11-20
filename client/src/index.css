@@ -3,18 +3,22 @@ body {
 }
 
 #root {
+  background-image: url(https://avatanplus.com/files/resources/original/5784810963445155dd980cbf.jpg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
 
 .header {
-  border: solid 1px black;
+  margin: 5px;
   flex-grow:1;
 }
 
 .Weather {
-  border: solid 1px black;
   flex-grow:1;
 }
 
@@ -25,8 +29,6 @@ body {
 
 .ControlPanel {
   flex-grow:1;
-  background-color: rgb(168, 240, 140);
-  border: solid 1px black;
   max-width: 500px;
   padding: 10px;
 }
@@ -39,12 +41,17 @@ body {
 
 .Clothes {
   flex-grow:1;
-  background-color: oldlace;
-  border: solid 1px black;
+  /* background-color: oldlace;
+  border: solid 1px black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer {
-  background-color: rgb(218, 170, 246);
+  background-color: rgb(238, 224, 246);
   border: solid 1px black;
   flex-grow:1;
 }
+
+

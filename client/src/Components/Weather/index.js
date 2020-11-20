@@ -46,7 +46,7 @@ function Weather() {
               <button onClick={clickHandler}>Change city</button>
             </div>
             <div className="d-flex justify-content-center">
-              <div>{`${city} ${date} ${data.main?.temp}°C ${data.weather && data.weather[0].description} ${data.main?.temp_min}°C / ${data.main?.temp_max}°C`}</div>
+              <div>{`${city} ${date} ${Math.round(data.main?.temp)}°C ${data.weather && data.weather[0].description} ${Math.round(data.main?.temp_min)}°C / ${Math.round(data.main?.temp_max)}°C`}</div>
             </div>
           </div>
         )
