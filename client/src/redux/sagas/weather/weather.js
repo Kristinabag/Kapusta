@@ -23,6 +23,6 @@ function* workerWeatherLoad(queryObj) {
 
 }
 
-export function* watcherWeatherLoad() {
+export default function* watcherWeatherLoad() {
   yield takeEvery(LOAD_WEATHER, workerWeatherLoad)
 }

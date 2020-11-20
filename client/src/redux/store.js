@@ -3,12 +3,12 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import initState from './initState';
 import rootReducer from './reducers/rootReducer';
 import createSagaMiddleware from 'redux-saga';
-import { watcherWeatherLoad } from './sagas/weather/weather';
+import rootSaga from './sagas/rootSaga';
 
-const weatherSagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(rootReducer, initState, composeWithDevTools(applyMiddleware(weatherSagaMiddleware)));
+const store = createStore(rootReducer, initState, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
-weatherSagaMiddleware.run(watcherWeatherLoad);
+sagaMiddleware.run(rootSaga);
 
 export default store;
