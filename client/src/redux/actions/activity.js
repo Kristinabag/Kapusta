@@ -1,10 +1,8 @@
 import { CHOOSE_ACTIVITY } from '../types/activity';
 
-const chooseActivity = (activity) => {
-  return {
-    type: CHOOSE_ACTIVITY,
-    payload: activity,
-  }
-}
+const chooseActivity = (activity) => ({
+  type: CHOOSE_ACTIVITY,
+  payload: activity,
+});
 
-export { chooseActivity };
+export default chooseActivity;

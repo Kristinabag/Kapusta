@@ -1,7 +1,8 @@
-import "./style.css";
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { loadClothesSaga } from "../../redux/actions/clothes";
+/* eslint-disable no-nested-ternary */
+import './style.css';
+import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { loadClothesSaga } from '../../redux/actions/clothes';
 
 function Clothes() {
   const dispatch = useDispatch();
@@ -14,30 +15,27 @@ function Clothes() {
 
   useEffect(() => {
     if (weather.main) {
-    const temperature = weather.main.temp;
-    const weatherId = weather.weather.id;
+      const temperature = weather.main.temp;
+      const weatherId = weather.weather.id;
 
-    const weatherType = weatherId >= 200 && weatherId <= 531 ? "rain"
-        : weatherId >= 600 && weatherId <= 622 ? "snow"
-        : weatherId === 800 ? "clear" : "clouds";
+      const weathType = weatherId >= 200 && weatherId <= 531 ? 'rain'
+        : weatherId >= 600 && weatherId <= 622 ? 'snow'
+          : weatherId === 800 ? 'clear' : 'clouds';
 
-    const temperatureType = temperature < -20 ? "extraFreeze"
-        : temperature >= -20 && temperature < 1 ? "freeze"
-        : temperature >= 1 && temperature < 11 ? "cold"
-        : temperature >= 11 && temperature < 21 ? "warm" : "hot";
-    
-    setWeatherType(weatherType);
-    setTemperatureType(temperatureType);
-  }}, [weather]);
+      const tempType = temperature < -20 ? 'extraFreeze'
+        : temperature >= -20 && temperature < 1 ? 'freeze'
+          : temperature >= 1 && temperature < 11 ? 'cold'
+            : temperature >= 11 && temperature < 21 ? 'warm' : 'hot';
 
+      setWeatherType(weathType);
+      setTemperatureType(tempType);
+    }
+  }, [weather]);
 
-  console.log('storeClothes', clothes);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (temperatureType && weatherType) {
-      dispatch(loadClothesSaga([activity, temperatureType, weatherType]))
+      dispatch(loadClothesSaga([activity, temperatureType, weatherType]));
     }
-    
   },
   [activity, dispatch, temperatureType, weatherType]);
 
@@ -57,7 +55,7 @@ function Clothes() {
         <img src="./img/ugg.png" />
       </div>
       <div> */}
-        {!!clothes.length && clothes.map(el => <img src={el.imgUrl} alt={el.name} />)}
+        {!!clothes.length && clothes.map((el) => <img src={el.imgUrl} alt={el.name} />)}
       </div>
     </div>
   );

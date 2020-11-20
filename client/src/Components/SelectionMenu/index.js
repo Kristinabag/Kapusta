@@ -1,8 +1,8 @@
 function SelectionMenu() {
   return (
     <div className="SelectionMenu">
-    Навигация
-  </div>
+      Навигация
+    </div>
   );
 }
 

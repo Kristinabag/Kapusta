@@ -3,11 +3,11 @@ import { CHOOSE_ACTIVITY } from '../types/activity';
 const activityReducer = (state = 'leasure-walking', action) => {
   switch (action.type) {
     case CHOOSE_ACTIVITY:
-      return action.payload
-  
+      return action.payload;
+
     default:
-      return state
+      return state;
   }
-}
+};
 
 export default activityReducer;
