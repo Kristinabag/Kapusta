@@ -1,18 +1,14 @@
-const { ADD, REMOVE } = require("../types/loader");
+const { ADD, REMOVE } = require('../types/loader');
 
-const addLoader = () => {
-  return {
-    type: ADD
-  }
-}
+const addLoader = () => ({
+  type: ADD,
+});
 
-const removeLoader = () => {
-  return {
-    type: REMOVE
-  }
-}
+const removeLoader = () => ({
+  type: REMOVE,
+});
 
 export {
   addLoader,
-  removeLoader
-}
+  removeLoader,
+};
