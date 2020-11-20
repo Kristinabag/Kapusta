@@ -13,7 +13,6 @@ router
       weatherFor: weatherType,
       temperatureFor: temperature,
     });
-    console.log(clothes);
     res.json(clothes);
   });
 

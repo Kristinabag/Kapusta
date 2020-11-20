@@ -11,7 +11,6 @@ function Clothes() {
 
   const [weatherType, setWeatherType] = useState('');
   const [temperatureType, setTemperatureType] = useState('');
-  console.log('weather', weather);
 
   useEffect(() => {
     if (weather.main) {
@@ -27,11 +26,8 @@ function Clothes() {
         : temperature >= 1 && temperature < 11 ? "cold"
         : temperature >= 11 && temperature < 21 ? "warm" : "hot";
     
-        setWeatherType(weatherType);
-        setTemperatureType(temperatureType);
-
-        const weatherAndActivityParams = [activity, temperatureType, weatherType];
-        console.log('weatherAndActivityParams', weatherAndActivityParams);
+    setWeatherType(weatherType);
+    setTemperatureType(temperatureType);
   }}, [weather]);
 
 

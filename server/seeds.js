@@ -456,6 +456,33 @@ async function seedBase() {
       layer: 2,
       imgUrl: './img/bootsWinter.png',
     }),
+    new ClothingItem({
+      name: 'socks',
+      type: 'shoes',
+      weatherFor: ['clear', 'clouds', 'rain', 'snow'],
+      temperatureFor: ['hot', 'warm', 'cold', 'freeze'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-cycling', 'sport-jogging', 'sport-winter', 'sport-hiking'],
+      layer: 1,
+      imgUrl: './img/socks.png',
+    }),
+    new ClothingItem({
+      name: 'short socks',
+      type: 'shoes',
+      weatherFor: ['clear', 'clouds', 'rain'],
+      temperatureFor: ['hot', 'warm', 'cold'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
+      layer: 1,
+      imgUrl: './img/sockShort.png',
+    }),
+    new ClothingItem({
+      name: 'socks',
+      type: 'shoes',
+      weatherFor: ['clear', 'clouds', 'rain', 'snow'],
+      temperatureFor: ['freeze', 'extraFreeze'],
+      activityFor: ['work-informal', 'leasure-walking', 'sport-winter', 'sport-hiking', 'chilling-at-home'],
+      layer: 1,
+      imgUrl: './img/socksWarm.png',
+    }),
   ];
 
   await mongoose.connection.dropDatabase();
