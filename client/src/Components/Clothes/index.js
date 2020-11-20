@@ -1,9 +1,10 @@
 import './style.css'
 
 function Clothes() {
+  // const hat = 
+
   return (
     <div className="Clothes">
-      Прикидон
       <div className="head type">
         <img src="./img/hatWarm.png" />
       </div>

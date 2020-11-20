@@ -4,7 +4,8 @@ import Footer from './Components/Footer';
 import SelectionMenu from './Components/SelectionMenu';
 import Clothes from './Components/Clothes';
 import ContolPanel from './Components/ContolPanel';
-// import Weather from './Components/Weather';
+import Weather from './Components/Weather';
+import Profile from './Components/Profile';
 import './index.css'
 
 
@@ -22,6 +23,17 @@ function App() {
             <SelectionMenu />
             </div>
           </Route>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
+          <Route exact path='/elbrus' component={() => { 
+            window.location.href = 'https://elbrusboot.camp/'; 
+            return null;
+          }}/>
+          <Route exact path='/gitRepo' component={() => { 
+            window.location.href = 'https://github.com/Kristinabag/Kapusta'; 
+            return null;
+          }}/>
         </Switch>
         <Footer />
       </Router>

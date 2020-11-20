@@ -1,5 +1,5 @@
 import './style.css';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { chooseActivity } from '../../redux/actions/activity';
 import { useState } from 'react';
 

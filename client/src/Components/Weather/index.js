@@ -32,7 +32,7 @@ function Weather() {
 
   return (
     <>
-      {
+      {/* {
         loader ?
         (
           <div className={style.loaderWr}>
@@ -50,7 +50,7 @@ function Weather() {
             </div>
           </div>
         )
-      }
+      } */}
   </>)
 }
 

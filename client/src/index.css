@@ -1,13 +1,15 @@
 body {
   all: unset;
-}
-
-#root {
-  background-image: url(https://avatanplus.com/files/resources/original/5784810963445155dd980cbf.jpg);
-  /* background-position: center; */
+  background-image: url(https://cdn.pixabay.com/photo/2019/09/20/06/01/watercolor-background-4490904_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  font-family: Courier, Verdana, sans-serif;
+}
+
+#root {
+  /* background-image: url(https://avatanplus.com/files/resources/original/5784810963445155dd980cbf.jpg); */
+  /* background-position: center; */
   display: flex;
   flex-direction: column;
 
@@ -49,9 +51,20 @@ body {
 }
 
 .footer {
-  background-color: rgb(238, 224, 246);
+  /* background-color: rgb(238, 224, 246);
   border: solid 1px black;
-  flex-grow:1;
+  flex-grow:1; */
+  position: absolute;
+  min-height: 50px;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  background-color:#7f8fa699;
+  font-size: 20px;
+  font-family: Courier, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

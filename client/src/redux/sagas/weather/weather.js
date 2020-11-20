@@ -10,12 +10,10 @@ function getWeather(city) {
 
 
 function* workerWeatherLoad(queryObj) {
-  console.log('>>>>>',queryObj);
   
   yield put(addLoader()) // put ~= dispatch
 
   const weatherData = yield call(getWeather, queryObj.payload);
-  console.log(weatherData, 'weatherdata');
   
   yield put(addWeather(weatherData));
 
@@ -23,6 +21,6 @@ function* workerWeatherLoad(queryObj) {
 
 }
 
-export function* watcherWeatherLoad() {
+export default function* watcherWeatherLoad() {
   yield takeEvery(LOAD_WEATHER, workerWeatherLoad)
 }
