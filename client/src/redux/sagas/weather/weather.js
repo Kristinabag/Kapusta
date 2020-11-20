@@ -4,7 +4,7 @@ import { addLoader, removeLoader } from "../../actions/loader";
 import { addWeather } from "../../actions/weather";
 
 function getWeather(city) {
-  return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_API}&lang=ru`)
+  return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metricg&appid=${process.env.REACT_APP_WEATHER_API}&lang=ru`)
           .then((res) => res.json())
 }
 
