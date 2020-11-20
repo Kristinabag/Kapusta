@@ -42,14 +42,16 @@ function Weather() {
 
 
   return (
+    <div className="Weather">
     <div className="d-flex flex-column align-items-center">
-      <div className="d-flex justify-content-center">
-        <input onChange={inputHandler} type="text" value={value} placeholder="Enter city" />
+      <div className="d-flex justify-content-center m-1">
+        <input className="mr-1" onChange={inputHandler} type="text" value={value} placeholder="Enter city" />
         <button onClick={clickHandler}>Change city</button>
       </div>
       <div className="d-flex justify-content-center">
         <div>{`${city} ${date} ${temp}°C ${weatherState} ${low}°C / ${high}°C`}</div>
       </div>
+    </div>
     </div>
   )
 }
