@@ -21,6 +21,7 @@ const clothingItemSchema = new mongoose.Schema({
     type: String,
     required: true,
   }],
+  layer: Number,
   imgUrl: String,
 });
 
