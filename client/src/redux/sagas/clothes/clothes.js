@@ -3,7 +3,7 @@ import {call, put, takeEvery} from 'redux-saga/effects'
 import { addClothes } from "../../actions/clothes";
 
 function getClothes(params) {
-  return fetch(`${process.env.REACT_APP_API_URL}/clothes/${params}`)
+  return fetch(`${process.env.REACT_APP_API_URL}/clothes/${params[0]}/${params[1]}/${params[2]}`)
     .then((res) => res.json());
 }
 
