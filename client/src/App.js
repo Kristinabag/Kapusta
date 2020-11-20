@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            {/* <Weather /> */}
+            <Weather />
             <div className="mainComponent">
             <ContolPanel />
             <Clothes />
