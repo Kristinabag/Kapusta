@@ -4,7 +4,7 @@ import Footer from './Components/Footer';
 import SelectionMenu from './Components/SelectionMenu';
 import Clothes from './Components/Clothes';
 import ContolPanel from './Components/ContolPanel';
-import Weather from './Components/Weather';
+// import Weather from './Components/Weather';
 import './index.css'
 
 
@@ -15,7 +15,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Weather />
+            {/* <Weather /> */}
             <div className="mainComponent">
             <ContolPanel />
             <Clothes />

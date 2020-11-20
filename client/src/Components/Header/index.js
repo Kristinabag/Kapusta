@@ -16,7 +16,7 @@ function Header() {
           </ul>
         </div>
         <button className="btn btn-secondary disabled" type="submit">Войти</button>
-        <button className="btn btn-secondary disabled ml-1" type="submit">Зарегестрироваться</button>
+        <button className="btn btn-secondary disabled ml-1" type="submit">Зарегистрироваться</button>
       </nav>
     </div>
   );

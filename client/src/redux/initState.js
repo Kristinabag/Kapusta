@@ -1,6 +1,7 @@
 const initState = {
   weather: {},
-  loader: false
+  activity: 'leasure-walking',
+  loader: false,
 };
 
 export default initState;
