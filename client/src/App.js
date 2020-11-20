@@ -6,9 +6,6 @@ import Clothes from './Components/Clothes';
 import ContolPanel from './Components/ContolPanel';
 import Weather from './Components/Weather';
 import './index.css'
-import "bootswatch/dist/cosmo/bootstrap.min.css";
-// (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com/ for current theme names.)
-import Weather from './Components/Weather';
 
 
 function App() {
@@ -16,7 +13,6 @@ function App() {
     <>
       <Router>
         <Header />
-        <Weather />
         <Switch>
           <Route exact path="/">
             <Weather />
