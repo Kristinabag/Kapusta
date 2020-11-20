@@ -14,9 +14,8 @@ const clothingItemSchema = new mongoose.Schema({
     required: true,
   },
   activityFor: [{
-    type: mongoose.ObjectId,
-    ref: 'Activity',
-    // required: true,
+    type: String,
+    required: true,
   }],
   temperatureFor: [{
     type: String,

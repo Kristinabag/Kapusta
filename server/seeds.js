@@ -5,56 +5,13 @@ const ClothingItem = require('./models/clothingItem');
 mongoose.connect('mongodb://localhost:27017/kapusta');
 
 async function seedBase() {
-  // const activities = [
-  //   new Activity({
-  //     type: 'work',
-  //     subtype: 'office',
-  //   }),
-  //   new Activity({
-  //     type: 'work',
-  //     subtype: 'informal',
-  //   }),
-  //   new Activity({
-  //     type: 'leasure',
-  //     subtype: 'chillingAtHome',
-  //   }),
-  //   new Activity({
-  //     type: 'leasure',
-  //     subtype: 'walkingExploring',
-  //   }),
-  //   new Activity({
-  //     type: 'leasure',
-  //     subtype: 'goingOut',
-  //   }),
-  //   new Activity({
-  //     type: 'sport',
-  //     subtype: 'winter',
-  //   }),
-  //   new Activity({
-  //     type: 'sport',
-  //     subtype: 'water',
-  //   }),
-  //   new Activity({
-  //     type: 'sport',
-  //     subtype: 'jogging',
-  //   }),
-  //   new Activity({
-  //     type: 'sport',
-  //     subtype: 'cycling',
-  //   }),
-  //   new Activity({
-  //     type: 'sport',
-  //     subtype: 'hiking',
-  //   }),
-  // ];
-
   const clothes = [
     new ClothingItem({
       name: 'backpack',
       type: 'bag',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190ab', '5fb63e7297039a54b01190a5'],
+      activityFor: ['work-informal', 'sport-hiking', 'leasure-walking'],
       imgUrl: './img/backpack.png',
     }),
     new ClothingItem({
@@ -62,7 +19,7 @@ async function seedBase() {
       type: 'bag',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout',],
       imgUrl: './img/bag1.png',
     }),
     new ClothingItem({
@@ -70,7 +27,7 @@ async function seedBase() {
       type: 'bag',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a6', '5fb63e7297039a54b01190a5'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/bag2.png',
     }),
     new ClothingItem({
@@ -78,7 +35,7 @@ async function seedBase() {
       type: 'bag',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout',],
       imgUrl: './img/bag3.png',
     }),
     new ClothingItem({
@@ -86,7 +43,7 @@ async function seedBase() {
       type: 'bag',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/bag4.png',
     }),
     new ClothingItem({
@@ -94,7 +51,7 @@ async function seedBase() {
       type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/belt1.png',
     }),
     new ClothingItem({
@@ -102,7 +59,7 @@ async function seedBase() {
       type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/belt2.png',
     }),
     new ClothingItem({
@@ -110,7 +67,7 @@ async function seedBase() {
       type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/belt2.png',
     }),
     new ClothingItem({
@@ -118,7 +75,7 @@ async function seedBase() {
       type: 'hat',
       weatherFor: ['clear', 'clouds', 'rain'],
       temperatureFor: ['hot', 'warm'],
-      activityFor: ['5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/hat1.png',
     }),
     new ClothingItem({
@@ -126,7 +83,7 @@ async function seedBase() {
       type: 'hat',
       weatherFor: ['clear', 'clouds', 'rain'],
       temperatureFor: ['hot', 'warm', 'cold'],
-      activityFor: ['5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a9', '5fb63e7297039a54b01190ab'],
+      activityFor: ['work-informal', 'leasure-walking', 'sport-jogging', 'sport-hiking'],
       imgUrl: './img/hatBaseball.png',
     }),
     new ClothingItem({
@@ -134,7 +91,7 @@ async function seedBase() {
       type: 'hat',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6', '5fb63e7297039a54b01190a7', '5fb63e7297039a54b01190ab'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-winter', 'sport-hiking'],
       imgUrl: './img/hatBonbon.png',
     }),
     new ClothingItem({
@@ -142,7 +99,7 @@ async function seedBase() {
       type: 'hat',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6', '5fb63e7297039a54b01190a7', '5fb63e7297039a54b01190ab'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-winter', 'sport-hiking'],
       imgUrl: './img/hatWarm.png',
     }),
     new ClothingItem({
@@ -150,7 +107,7 @@ async function seedBase() {
       type: 'glasses',
       weatherFor: ['clear'],
       temperatureFor: ['hot', 'warm'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6', '5fb63e7297039a54b01190ab'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-hiking'],
       imgUrl: './img/glassesSun1.png',
     }),
     new ClothingItem({
@@ -158,7 +115,7 @@ async function seedBase() {
       type: 'glasses',
       weatherFor: ['clear'],
       temperatureFor: ['hot', 'warm'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6', '5fb63e7297039a54b01190ab'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-hiking'],
       imgUrl: './img/glassesSun2.png',
     }),
     new ClothingItem({
@@ -166,7 +123,7 @@ async function seedBase() {
       type: 'glasses',
       weatherFor: ['clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/glassesOffice.png',
     }),
     new ClothingItem({
@@ -174,7 +131,7 @@ async function seedBase() {
       type: 'glasses',
       weatherFor: ['clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/glassesPointed.png',
     }),
     new ClothingItem({
@@ -182,7 +139,7 @@ async function seedBase() {
       type: 'glasses',
       weatherFor: ['clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/glassesRound.png',
     }),
     new ClothingItem({
@@ -190,13 +147,12 @@ async function seedBase() {
       type: 'scarf',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['warm', 'cold', 'freeze', 'extraFreeze'],
-      activityFor: ['5fb63e7297039a54b01190a2', '5fb63e7297039a54b01190a3', '5fb63e7297039a54b01190a5', '5fb63e7297039a54b01190a6', '5fb63e7297039a54b01190a7', '5fb63e7297039a54b01190ab'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-winter', 'sport-hiking'],
       imgUrl: './img/hatBonbon.png',
     }),
   ];
 
-  // await mongoose.connection.dropDatabase();
-  // await Activity.insertMany(activities);
+  await mongoose.connection.dropDatabase();
   await ClothingItem.insertMany(clothes);
   await mongoose.disconnect();
 }
