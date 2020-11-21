@@ -9,15 +9,9 @@ function getWeather(city) {
 }
 
 function* workerWeatherLoad(queryObj) {
-  console.log('>>>>>', queryObj);
-
   yield put(addLoader()); // put ~= dispatch
-
   const weatherData = yield call(getWeather, queryObj.payload);
-  console.log(weatherData, 'weatherdata');
-
   yield put(addWeather(weatherData));
-
   yield put(removeLoader());
 }
 
