@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-nested-ternary */
 import './style.css';
 import { useEffect, useState } from 'react';
@@ -55,7 +56,9 @@ function Clothes() {
         <img src="./img/ugg.png" />
       </div>
       <div> */}
-        {!!clothes.length && clothes.map((el) => <img src={el.imgUrl} alt={el.name} />)}
+        {!!clothes.length && clothes.map(
+          (el) => <img key={el._id} src={el.imgUrl} alt={el.name} />,
+        )}
       </div>
     </div>
   );

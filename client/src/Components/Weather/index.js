@@ -6,19 +6,16 @@ import dateBuilder from '../../helpers/dateBuilder';
 
 function Weather() {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.weather);
+  const weather = useSelector((state) => state.weather);
   const loader = useSelector((state) => state.loader);
 
-  const [city] = useState('Москва');
   const [date, setDate] = useState('');
 
   useEffect(() => {
-    // redux saga
-    dispatch(loadWeatherSaga(city));
-    console.log('what is in data', data);
+    dispatch(loadWeatherSaga('Moscow'));
     const d = new Date();
     setDate(dateBuilder(d));
-  }, [city, dispatch]);
+  }, []);
 
   return (
     <>
@@ -32,11 +29,11 @@ function Weather() {
           : (
             <div className={style.weather}>
               <div>
-                <span className={style.city}>{city}</span>
+                <span className={style.city}>{weather.name}</span>
                 {` - ${date}.`}
-                <span className={style.temp}>{` ${Math.round(data.main?.temp)}°C`}</span>
-                {` - ${data.weather && data.weather[0].description}. Чувствуется как `}
-                <span className={style.temp}>{`${Math.round(data.main?.feels_like)}°C.`}</span>
+                <span className={style.temp}>{` ${Math.round(weather.main?.temp)}°C`}</span>
+                {` - ${weather.weather && weather.weather[0].description}. Чувствуется как `}
+                <span className={style.temp}>{`${Math.round(weather.main?.feels_like)}°C.`}</span>
               </div>
             </div>
           )
