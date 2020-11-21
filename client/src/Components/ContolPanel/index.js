@@ -1,7 +1,7 @@
 import './style.css';
-import { useDispatch } from "react-redux";
-import { chooseActivity } from '../../redux/actions/activity';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import chooseActivity from '../../redux/actions/activity';
 
 function ControlPanel() {
   const dispatch = useDispatch();
@@ -15,9 +15,9 @@ function ControlPanel() {
   return (
     <div className="ControlPanel">
 
-    <div class="card border-dark mb-3">
-      <div class="card-body">
-        <h4 class="card-title">Тип активности: </h4>
+      <div className="card border-primary mb-3">
+        <div className="card-header">Типа активности</div>
+        <div className="card-body">
           <select value={selectValue} onChange={setActivity} className="nav-link dropdown-toggle" data-toggle="dropdown">
             <option className="h-1" value="leasure-walking">Пешая прогулка</option>
             <option className="m-1" value="chilling-at-home">Отдыхать дома</option>
@@ -29,27 +29,27 @@ function ControlPanel() {
             <option className="m-1" value="sport-winter">Зимние виды спорта</option>
             <option className="m-1" value="sport-hiking">Треккинг</option>
           </select>
+        </div>
       </div>
-    </div>
 
-    <div class="card border-dark mb-3">
-      <div class="card-body">
-        <h4 class="card-title">Одежда:  </h4>
-        <select className="nav-link dropdown-toggle" data-toggle="dropdown">
+      <div className="card border-dark mb-3">
+        <div className="card-header">Одежда</div>
+        <div className="card-body">
+          <select className="nav-link dropdown-toggle" data-toggle="dropdown">
             <option>Гардероб по умолчанию</option>
             <option>Мой гардероб</option>
           </select>
-      </div>
-    </div>
-
-     <div className="recomendation">
-      <div className="card border-dark mb-3" >
-        <div className="card-header"><h2>Recommedation</h2></div>
-        <div className="card-body">
-          <p className="card-text">Сегодня ветрено, поэтому оденься теплее и не забудь зонт, возможны осадки.</p>
         </div>
       </div>
-     </div>
+
+      <div className="recomendation">
+        <div className="card border-dark mb-3">
+          <div className="card-header">Рекомендации</div>
+          <div className="card-body">
+            <p className="card-text">Сегодня ветрено, поэтому оденься теплее и не забудь зонт, возможны осадки.</p>
+          </div>
+        </div>
+      </div>
 
     </div>
   );

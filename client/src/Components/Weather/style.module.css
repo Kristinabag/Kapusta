@@ -1,9 +1,23 @@
-img {
-  align: center;
-  color: orange;
-  max-height:500px;
-  max-width:600px;
-  border-radius: 5px;
+.weather {
+  background-color:rgba(236, 240, 241, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: rgba(99, 110, 114,1.0);
+  margin-bottom: 10px;
+}
+
+.city {
+  font-size: 1.2em;
+  color: rgba(99, 110, 114,1.0);
+  font-weight: bold;
+}
+
+.temp {
+  font-size: 1.2em;
+  color: rgba(99, 110, 114,1.0);
+  font-weight: bold;
 }
 
 .loaderWr {

@@ -1,17 +1,45 @@
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import * as RiIcons from 'react-icons/ri';
+import * as IoIcons from 'react-icons/io';
+
+import style from './style.module.css';
 
 function Header() {
+  const [user, setUser] = useState(true);
+
+  const loginHandler = () => setUser(true);
+  const logoutHandler = () => setUser(false);
+
   return (
-      <div className="d-flex justify-content-between navbar navbar-expand-lg navbar-light bg-light">
-        <div className="d-flex">
-          <Link className="navbar-brand" to={"/"}>Главная</Link>
-          <Link className="nav-link" to={"/clothes"}>Шмотки</Link>
-        </div>
-        <div>
-        <Link className="btn btn-secondary" to="/login">Войти</Link>
-        <Link className="btn btn-secondary" to="/registration">Зарегистрироваться</Link>
-        </div>
+    <div className={style.header}>
+      <div className="d-flex">
+        <Link className="navbar-brand" to="/">Главная</Link>
       </div>
+      <div>
+        {
+          user
+            ? (
+              <>
+                <Link className="btn btn-outline-primary mx-1" to="/wardrobe">
+                  <RiIcons.RiTShirt2Line />
+                  <span>Гардероб</span>
+                </Link>
+                <Link className="btn btn-outline-primary mx-1" onClick={logoutHandler}>
+                  <IoIcons.IoMdExit />
+                  <span>Выйти</span>
+                </Link>
+              </>
+            )
+            : (
+              <>
+                <Link className="btn btn-secondary mx-1" onClick={loginHandler}>Войти</Link>
+                <Link className="btn btn-secondary mx-1" to="/registration">Зарегистрироваться</Link>
+              </>
+            )
+        }
+      </div>
+    </div>
   );
 }
 

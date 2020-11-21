@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import loaderReducer from './loader';
 import weatherReducer from './weather';
 import activityReducer from './activity';
@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
   weather: weatherReducer,
   activity: activityReducer,
   clothes: clothesReducer,
-  loader: loaderReducer
+  loader: loaderReducer,
 });
 
 export default rootReducer;

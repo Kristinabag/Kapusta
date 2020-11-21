@@ -1,14 +1,14 @@
-import { ADD, REMOVE } from "../types/loader"
+import { ADD, REMOVE } from '../types/loader';
 
 const loaderReducer = (state = false, action) => {
   switch (action.type) {
     case ADD:
-      return true
+      return true;
     case REMOVE:
-      return false
+      return false;
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default loaderReducer
+export default loaderReducer;

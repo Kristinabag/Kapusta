@@ -1,10 +1,19 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import style from './style.module.css';
 
 function Footer() {
   return (
-    <div className="footer d-flex justify-content-center">
-      <div>&copy; 2020 <Link to="/elbrus" className="btn-link" target="_blank">elbrusboot.camp</Link> | By <Link className="btn-link gitrepo" to="/gitRepo" target="_blank">Kapusta</Link></div>
-  </div>
+    <div className={`${style.footer}`}>
+      <div>
+        &copy; 2020
+        {' '}
+        <Link to="/elbrus" className={`${style.link}`} target="_blank">elbrusboot.camp</Link>
+        {' '}
+        | By
+        {' '}
+        <Link className={`${style.link}`} to="/gitRepo" target="_blank">Kapusta</Link>
+      </div>
+    </div>
   );
 }
 
