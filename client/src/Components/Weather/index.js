@@ -9,17 +9,8 @@ function Weather() {
   const data = useSelector((state) => state.weather);
   const loader = useSelector((state) => state.loader);
 
-  const [value, setValue] = useState('');
-  const [city, setCity] = useState('Moscow');
+  const [city] = useState('Москва');
   const [date, setDate] = useState('');
-
-  const inputHandler = (e) => {
-    setValue(e.target.value);
-  };
-
-  const clickHandler = () => {
-    setCity(value);
-  };
 
   useEffect(() => {
     // redux saga
@@ -39,13 +30,13 @@ function Weather() {
             </div>
           )
           : (
-            <div className="d-flex flex-column align-items-center">
-              <div className="d-flex justify-content-center">
-                <input onChange={inputHandler} type="text" value={value} placeholder="Enter city" />
-                <button type="button" onClick={clickHandler}>Change city</button>
-              </div>
-              <div className="d-flex justify-content-center">
-                <div>{`${city} ${date} ${Math.round(data.main?.temp)}°C ${data.weather && data.weather[0].description} ${Math.round(data.main?.temp_min)}°C / ${Math.round(data.main?.temp_max)}°C`}</div>
+            <div className={style.weather}>
+              <div>
+                <span className={style.city}>{city}</span>
+                {` - ${date}.`}
+                <span className={style.temp}>{` ${Math.round(data.main?.temp)}°C`}</span>
+                {` - ${data.weather && data.weather[0].description}. Чувствуется как `}
+                <span className={style.temp}>{`${Math.round(data.main?.feels_like)}°C.`}</span>
               </div>
             </div>
           )

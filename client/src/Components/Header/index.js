@@ -1,23 +1,48 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import * as RiIcons from 'react-icons/ri';
+import * as IoIcons from 'react-icons/io';
+
+import style from './style.module.css';
 
 function Header() {
+  const [user, setUser] = useState(true);
+
+  const loginHandler = () => setUser(true);
+  const logoutHandler = () => setUser(false);
+
   return (
-    <div className="header">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className={style.header}>
+      <div className="d-flex">
         <Link className="navbar-brand" to="/">Главная</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarColor03">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <Link className="nav-link" to="/clothes">Шмотки</Link>
-            </li>
-          </ul>
-        </div>
-        <button className="btn btn-secondary disabled" type="submit">Войти</button>
-        <button className="btn btn-secondary disabled ml-1" type="submit">Зарегистрироваться</button>
-      </nav>
+      </div>
+      <div>
+        {
+          user
+            ? (
+              <>
+                <Link to="/wardrobe">
+                  <button type="button" className="btn btn-outline-primary mx-1">
+                    <RiIcons.RiTShirt2Line />
+                    <span> Гардероб</span>
+                  </button>
+                </Link>
+                <Link to="/logout">
+                  <button onClick={logoutHandler} type="button" className="btn btn-outline-primary mx-1">
+                    <IoIcons.IoMdExit />
+                    <span>Выйти</span>
+                  </button>
+                </Link>
+              </>
+            )
+            : (
+              <>
+                <Link to="/login"><button type="button" className="btn btn-secondary mx-1" onClick={loginHandler}>Войти</button></Link>
+                <Link to="/registration"><button type="button" className="btn btn-secondary mx-1">Зарегистрироваться</button></Link>
+              </>
+            )
+        }
+      </div>
     </div>
   );
 }

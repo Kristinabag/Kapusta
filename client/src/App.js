@@ -1,10 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import SelectionMenu from './Components/SelectionMenu';
-import Clothes from './Components/Clothes';
-import ControlPanel from './Components/ControlPanel';
 import Weather from './Components/Weather';
+import Main from './Components/Main';
 import './index.css';
 
 function App() {
@@ -15,11 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Weather />
-            <div className="mainComponent">
-              <ControlPanel />
-              <Clothes />
-              <SelectionMenu />
-            </div>
+            <Main />
           </Route>
         </Switch>
         <Footer />
