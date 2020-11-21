@@ -46,7 +46,7 @@ function Clothes() {
       </div>
       <div className="body type">
         <img src="./img/jacketRain.png" />
-        <img src="./img/jumperPlain.png" />
+
       </div>
       <div className="legs type">
         <img src="./img/pants.png" />
