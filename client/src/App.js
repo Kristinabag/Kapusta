@@ -15,6 +15,22 @@ function App() {
             <Weather />
             <Main />
           </Route>
+          <Route
+            exact
+            path="/elbrus"
+            component={() => {
+              window.location.href = 'https://elbrusboot.camp/';
+              return null;
+            }}
+          />
+          <Route
+            exact
+            path="/gitRepo"
+            component={() => {
+              window.location.href = 'https://github.com/Kristinabag/Kapusta';
+              return null;
+            }}
+          />
         </Switch>
         <Footer />
       </Router>
