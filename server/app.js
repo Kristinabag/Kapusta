@@ -12,12 +12,14 @@ mongoose.connect(process.env.DB, {
 });
 
 const indexRouter = require('./routes/index');
+const userRouter = require('./routes/user');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/', indexRouter);
+app.use('/user', userRouter);
 
 app.listen(process.env.PORT || 3000);
 
