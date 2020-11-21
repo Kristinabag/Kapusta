@@ -7,12 +7,13 @@ import ContolPanel from './Components/ContolPanel';
 import Weather from './Components/Weather';
 import './index.css'
 
+
 function App() {
   return (
     <>
       <Router>
         <Header />
-        {/* <Weather /> */}
+
         <Switch>
           <Route exact path="/">
             <div className="mainComponent">
