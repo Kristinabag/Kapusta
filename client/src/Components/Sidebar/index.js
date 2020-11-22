@@ -1,34 +1,16 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import * as RiIcons from 'react-icons/ri';
 import * as AiIcons from 'react-icons/ai';
 import * as FiIcons from 'react-icons/fi';
-import { loadWeatherSaga } from '../../redux/actions/weather';
+import AutocompleteInput from '../AutocompleteInput';
+import './style.css';
 
 function Sidebar() {
-  const [formValue, setFormValue] = useState('');
-  const dispatch = useDispatch();
-
-  const onFormSubmit = (e) => {
-    e.preventDefault();
-    dispatch(loadWeatherSaga(formValue));
-    setFormValue('');
-  };
-
   return (
     <>
       <div>
         <ul className="list-group list-group-flush">
-          <form onSubmit={onFormSubmit} value={formValue}>
-            <input
-              onChange={(e) => setFormValue(e.target.value)}
-              className="list-group-item"
-              type="text"
-              placeholder="Посмотреть другой город"
-            />
-            <button type="submit">Посмотреть</button>
-          </form>
+          <AutocompleteInput />
           <Link to="/" className="list-group-item navLink">
             <FiIcons.FiRefreshCcw />
             <span> Обновить вещи</span>

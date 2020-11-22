@@ -7,12 +7,13 @@ import dateBuilder from '../../helpers/dateBuilder';
 function Weather() {
   const dispatch = useDispatch();
   const weather = useSelector((state) => state.weather);
+  console.log(weather);
   const loader = useSelector((state) => state.loader);
 
   const [date, setDate] = useState('');
 
   useEffect(() => {
-    dispatch(loadWeatherSaga('Moscow'));
+    dispatch(loadWeatherSaga('Москва'));
     const d = new Date();
     setDate(dateBuilder(d));
   }, []);
