@@ -8,8 +8,12 @@ import rootSaga from './sagas/rootSaga';
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
-  rootReducer, initState, composeWithDevTools(applyMiddleware(sagaMiddleware)),
+  rootReducer, initState(), composeWithDevTools(applyMiddleware(sagaMiddleware)),
 );
+
+store.subscribe(() => {
+  localStorage.setItem('user', JSON.stringify(store.getState().user));
+});
 
 sagaMiddleware.run(rootSaga);
 
