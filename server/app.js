@@ -14,8 +14,9 @@ mongoose.connect(process.env.DB, {
 const userRouter = require('./routes/user');
 const clothesRouter = require('./routes/clothes');
 
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
 app.use(cors());
 
 app.use('/user', userRouter);

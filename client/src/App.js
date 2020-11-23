@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Weather from './Components/Weather';
@@ -10,28 +10,8 @@ function App() {
     <>
       <Router>
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Weather />
-            <Main />
-          </Route>
-          <Route
-            exact
-            path="/elbrus"
-            component={() => {
-              window.location.href = 'https://elbrusboot.camp/';
-              return null;
-            }}
-          />
-          <Route
-            exact
-            path="/gitRepo"
-            component={() => {
-              window.location.href = 'https://github.com/Kristinabag/Kapusta';
-              return null;
-            }}
-          />
-        </Switch>
+        <Weather />
+        <Main />
         <Footer />
       </Router>
     </>
