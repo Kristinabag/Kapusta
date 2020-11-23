@@ -1,11 +1,13 @@
 import { all } from 'redux-saga/effects';
 
 import weatherSaga from './weather/weather';
-import clothesSaga from './clothes/clothes';
+import addClothItemSaga from './clothes/addClothItem';
+import loadClothesSaga from './clothes/loadClothes';
 
 export default function* watcherAll() {
   yield all([
     weatherSaga(),
-    clothesSaga(),
+    addClothItemSaga(),
+    loadClothesSaga(),
   ]);
 }
