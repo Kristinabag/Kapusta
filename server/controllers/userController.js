@@ -12,7 +12,28 @@ const {
 const saltRounds = process.env.saltRounds ?? 10;
 
 const login = async (req, res) => {
-  console.log('login');
+  const { email, pass } = req.body;
+
+  if (email && pass) {
+    try {
+      const user = await User.findOne({ email }).exec();
+      const isValidPass = await bcrypt.compare(pass, user.pass);
+
+      if (isValidPass) {
+        const payload = { id: user._id };
+        user.accessToken = createToken('access', payload);
+        user.refreshToken = createToken('refresh', payload);
+
+        user.save();
+        return res.json(userDstructurization(user));
+      }
+      return res.sendStatus(401);
+    } catch (error) {
+      console.log(error);
+      return res.sendStatus(500);
+    }
+  }
+  return res.sendStatus(204);
 };
 
 const registration = async (req, res) => {
