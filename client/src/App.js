@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import Weather from './Components/Weather';
+// import Weather from './Components/Weather';
 import Main from './Components/Main';
 import './index.css';
 
@@ -10,12 +10,8 @@ function App() {
     <>
       <Router>
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Weather />
-            <Main />
-          </Route>
-        </Switch>
+        {/* <Weather /> */}
+        <Main />
         <Footer />
       </Router>
     </>

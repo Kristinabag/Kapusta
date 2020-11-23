@@ -9,6 +9,10 @@ const userSchema = new mongoose.Schema({
   pass: String,
   accessToken: String,
   refreshToken: String,
+  wardrobe: {
+    type: Array,
+    default: [],
+  },
 });
 
 module.exports = mongoose.model('User', userSchema);

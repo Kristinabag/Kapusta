@@ -33,7 +33,7 @@ function Sidebar() {
             <FiIcons.FiRefreshCcw />
             <span> Обновить вещи</span>
           </Link>
-          <Link to="/" className="list-group-item navLink">
+          <Link to="/wardrobe" className="list-group-item navLink">
             <RiIcons.RiTShirt2Line />
             <span> Гардероб</span>
           </Link>
