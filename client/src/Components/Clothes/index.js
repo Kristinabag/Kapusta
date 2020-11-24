@@ -9,7 +9,7 @@ import ClothesSet from '../ClothesSet';
 function Clothes() {
   const dispatch = useDispatch();
   const weather = useSelector((state) => state.weather);
-  const clothes = useSelector((state) => state.clothes);
+  // const clothes = useSelector((state) => state.clothes);
   const activity = useSelector((state) => state.activity);
   const wardrobeType = useSelector((state) => state.wardrobeType);
   const user = useSelector((state) => state.user);
