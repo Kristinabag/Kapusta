@@ -68,7 +68,7 @@ function SignUp() {
             <input onChange={handlerName} value={name} type="text" className="form-control" placeholder="Введите свое имя" />
             <input onChange={handlerPass} value={pass} type="password" className="form-control" placeholder="Придумайте пароль" />
           </div>
-          <button type="submit" className="btn btn-primary">Зарегестрироваться</button>
+          <button type="submit" className="btn btn-primary">Зарегистрироваться</button>
         </form>
       </div>
     </>
