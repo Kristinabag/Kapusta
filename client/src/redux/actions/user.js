@@ -8,10 +8,10 @@ const ACTION_CREATORS = {
     },
   }),
 
-  LOGOUT: () => ({ type: LOGOUT }),
-  // LOGOUT: () => {
-  //   return {type: LOGOUT}
-  // },
+  LOGOUT: () => ({
+    type: LOGOUT,
+  }),
+
   SET_NAME: (name) => ({
     type: SET_NAME,
     payload: {

@@ -23,7 +23,7 @@ function SignIn() {
     if (email.trim() && pass.trim()) {
       const myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
-
+      console.log(pass, email);
       let data = {
         email,
         pass,
@@ -46,7 +46,6 @@ function SignIn() {
             refreshToken: result.refreshToken,
           }));
           dispatch(ACTION_CREATORS.SET_NAME(result.name));
-
           history.replace(from);
         })
         .catch((error) => console.log('error', error));

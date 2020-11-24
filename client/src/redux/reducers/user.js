@@ -14,13 +14,11 @@ const userReducer = (user = {}, action) => {
     case LOGOUT:
       return {
         ...user,
-        // user: {
         name: '',
         isAuth: false,
         tokens: {
           accessToken: '',
           refreshToken: '',
-          // },
         },
       };
 

@@ -7,7 +7,7 @@ async function seedBase() {
   const clothes = [
     new ClothingItem({
       name: 'backpack',
-      type: 'bag',
+      type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-informal', 'sport-hiking', 'leasure-walking'],
@@ -15,7 +15,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'bag',
-      type: 'bag',
+      type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout',],
@@ -23,7 +23,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'bag',
-      type: 'bag',
+      type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
@@ -31,7 +31,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'bag',
-      type: 'bag',
+      type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout',],
@@ -39,7 +39,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'bag',
-      type: 'bag',
+      type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
@@ -47,7 +47,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'belt',
-      type: 'belt',
+      type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
@@ -55,7 +55,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'belt',
-      type: 'belt',
+      type: 'accessory',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
@@ -95,7 +95,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'sunglasses',
-      type: 'glasses',
+      type: 'accessory',
       weatherFor: ['clear'],
       temperatureFor: ['hot', 'warm'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-hiking'],
@@ -103,7 +103,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'sunglasses',
-      type: 'glasses',
+      type: 'accessory',
       weatherFor: ['clear'],
       temperatureFor: ['hot', 'warm'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-hiking'],
@@ -111,7 +111,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'glasses',
-      type: 'glasses',
+      type: 'accessory',
       weatherFor: ['clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
@@ -119,7 +119,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'glasses',
-      type: 'glasses',
+      type: 'accessory',
       weatherFor: ['clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
@@ -127,7 +127,7 @@ async function seedBase() {
     }),
     new ClothingItem({
       name: 'glasses',
-      type: 'glasses',
+      type: 'accessory',
       weatherFor: ['clouds', 'rain', 'snow'],
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
@@ -139,7 +139,7 @@ async function seedBase() {
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
       temperatureFor: ['warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-winter', 'sport-hiking'],
-      imgUrl: './img/hatBonbon.png',
+      imgUrl: './img/scarf.png',
     }),
     new ClothingItem({
       name: 'gown',
