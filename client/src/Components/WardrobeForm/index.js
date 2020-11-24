@@ -9,10 +9,11 @@ function WardrobeForm() {
   const [activityFor, setActivityFor] = useState([]);
   const [weatherFor, setWeatherFor] = useState([]);
   const [temperatureFor, setTemperatureFor] = useState([]);
-  const [layer, setLayer] = useState(null);
+  const [layer, setLayer] = useState(0);
   const clothForm = useRef(null);
 
   const user = useSelector((state) => state.user);
+  console.log('user: ', user);
   const dispatch = useDispatch();
 
   const onFormSubmit = (e) => {

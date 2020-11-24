@@ -34,13 +34,24 @@ router
   .get('/:activity/:temperature/:weatherType', async (req, res) => {
     const { activity, temperature, weatherType } = req.params;
     const { user } = req.body;
-    const clothes = await ClothingItem.find({
-      user: user.email,
-      activityFor: activity,
-      weatherFor: weatherType,
-      temperatureFor: temperature,
-    });
-    res.json(clothes);
+    if (user && user.email) {
+      const clothes = await ClothingItem.find({
+        // user: user._id,
+        user: user.email,
+        activityFor: activity,
+        weatherFor: weatherType,
+        temperatureFor: temperature,
+      });
+      res.json(clothes);
+    } else if (user) {
+      const clothes = await ClothingItem.find({
+        user: 'defaultUser',
+        activityFor: activity,
+        weatherFor: weatherType,
+        temperatureFor: temperature,
+      });
+      res.json(clothes);
+    }
   })
   .post('/new', upload.single('file'), async (req, res) => {
     try {
