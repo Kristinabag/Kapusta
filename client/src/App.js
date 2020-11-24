@@ -30,11 +30,6 @@ function App() {
               <PrivateRoute exact path="/info">
             <Info />
           </PrivateRoute> */}
-
-          <Route path="/">
-            Page 404
-          </Route>
-
         </Switch>
       </Router>
     </>
