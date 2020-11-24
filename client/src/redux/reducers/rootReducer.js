@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   weather: weatherReducer,
   activity: activityReducer,
   clothes: clothesReducer,
-  loader: loaderReducer,
+  loaders: loaderReducer,
   user: userReducer,
   wardrobeType: wardrobeTypeReduder,
 });
