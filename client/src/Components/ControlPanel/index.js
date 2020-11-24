@@ -1,6 +1,7 @@
 import './style.css';
 import { useDispatch } from 'react-redux';
 import chooseActivity from '../../redux/actions/activity';
+import changeWardrobeType from '../../redux/actions/wardrobeType';
 
 function ControlPanel() {
   const dispatch = useDispatch();
@@ -49,9 +50,13 @@ function ControlPanel() {
       <div className="card border-dark mb-3">
         <div className="card-header">Одежда</div>
         <div className="card-body">
-          <select className="nav-link dropdown-toggle" data-toggle="dropdown">
-            <option>Гардероб по умолчанию</option>
-            <option>Мой гардероб</option>
+          <select
+            onChange={(e) => dispatch(changeWardrobeType(e.target.value))}
+            className="nav-link dropdown-toggle"
+            data-toggle="dropdown"
+          >
+            <option value="default">Гардероб по умолчанию</option>
+            <option value="myWardrobe">Мой гардероб</option>
           </select>
         </div>
       </div>

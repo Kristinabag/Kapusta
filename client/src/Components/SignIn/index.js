@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
 import ACTION_CREATORS from '../../redux/actions/user';
 
@@ -8,8 +8,8 @@ function SignIn() {
   const location = useLocation();
   const dispatch = useDispatch();
 
-  const user = useSelector((state) => state.user);
-  console.log(user);
+  // const user = useSelector((state) => state.user);
+  // console.log(user);
 
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');

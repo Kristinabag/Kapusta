@@ -4,6 +4,7 @@ import weatherReducer from './weather';
 import activityReducer from './activity';
 import clothesReducer from './clothes';
 import userReducer from './user';
+import wardrobeTypeReduder from './wardrobeType';
 
 const rootReducer = combineReducers({
   weather: weatherReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   clothes: clothesReducer,
   loader: loaderReducer,
   user: userReducer,
+  wardrobeType: wardrobeTypeReduder,
 });
 
 export default rootReducer;
