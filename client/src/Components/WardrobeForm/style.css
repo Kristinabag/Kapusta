@@ -1,0 +1,24 @@
+.types {
+  display: flex;
+
+}
+
+.head img {
+  height: 100px;
+
+}
+
+.body img {
+  height: 150px;
+
+}
+
+.legs img {
+  height: 200px;
+
+}
+
+.boots img {
+  height: 100px;
+
+}

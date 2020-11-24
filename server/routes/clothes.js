@@ -4,8 +4,9 @@ const path = require('path');
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {
-    cb(null, path.join(path.dirname(require.main.filename), 'public', 'img'));
+    cb(null, '../client/public/img/');
   },
+  // dest: '../client/public/img/',
   filename(req, file, cb) {
     cb(null, `${file.originalname.split('.')[0]}${Date.now()}${path.extname(file.originalname)}`);
   },
@@ -31,10 +32,10 @@ const router = express.Router();
 
 router
   .get('/:activity/:temperature/:weatherType', async (req, res) => {
-    const { activity } = req.params;
-    const { temperature } = req.params;
-    const { weatherType } = req.params;
+    const { activity, temperature, weatherType } = req.params;
+    const { user } = req.body;
     const clothes = await ClothingItem.find({
+      user: user.email,
       activityFor: activity,
       weatherFor: weatherType,
       temperatureFor: temperature,
@@ -42,21 +43,28 @@ router
     res.json(clothes);
   })
   .post('/new', upload.single('file'), async (req, res) => {
-    const {
-      name, type, activityFor, temperatureFor, weatherFor, layer,
-    } = req.body;
-    console.log(req.body);
-    const cloth = new ClothingItem({
-      name,
-      type,
-      weatherFor,
-      temperatureFor,
-      activityFor,
-      layer,
-      imgUrl: `./img/${req.file.filename}`,
-    });
-    await cloth.save();
-    res.json({ cloth });
+    try {
+      const {
+        user, name, type, activityFor, temperatureFor, weatherFor, layer,
+      } = req.body;
+      const dbUser = await user.findOne({ email: user.email });
+      const cloth = new ClothingItem({
+        // user: dbUser._id,
+        user: dbUser.email,
+        name,
+        type,
+        weatherFor: JSON.parse(weatherFor),
+        temperatureFor: JSON.parse(temperatureFor),
+        activityFor: JSON.parse(activityFor),
+        layer,
+        imgUrl: `./img/${req.file?.filename}`,
+      });
+      await cloth.save();
+      res.json({ cloth });
+    } catch (err) {
+      console.log(err);
+      res.json(err);
+    }
   });
 
 module.exports = router;
