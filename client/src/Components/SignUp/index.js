@@ -55,6 +55,7 @@ function SignUp() {
   const handlerSubmit = (e) => {
     e.preventDefault();
     registration();
+    console.log('Registration');
   };
 
   return (
