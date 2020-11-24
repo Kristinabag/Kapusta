@@ -472,7 +472,7 @@ async function seedBase() {
       temperatureFor: ['hot', 'warm', 'cold'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       layer: 1,
-      imgUrl: './img/sockShort.png',
+      imgUrl: './img/socksShort.png',
     }),
     new ClothingItem({
       name: 'socks',
