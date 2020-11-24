@@ -4,6 +4,7 @@ import './style.css';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadClothesSaga } from '../../redux/actions/clothes';
+import ClothesSet from '../ClothesSet';
 
 function Clothes() {
   const dispatch = useDispatch();
@@ -41,6 +42,8 @@ function Clothes() {
   },
   [activity, dispatch, temperatureType, weatherType]);
 
+  console.log(clothes, 'clothes');
+
   return (
     <div className="Clothes">
       <div className="head type">
@@ -57,9 +60,10 @@ function Clothes() {
         <img src="./img/ugg.png" />
       </div>
       <div> */}
-        {!!clothes.length && clothes.map(
+        {/* {!!clothes.length && clothes.map(
           (el) => <img key={el._id} src={el.imgUrl} alt={el.name} />,
-        )}
+        )} */}
+        <ClothesSet />
       </div>
     </div>
   );
