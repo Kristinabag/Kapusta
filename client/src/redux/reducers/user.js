@@ -1,22 +1,19 @@
 import { LOGIN, LOGOUT, SET_NAME } from '../types/user';
 
-const userReducer = (state = [], action) => {
+const userReducer = (user = {}, action) => {
   switch (action.type) {
     case LOGIN:
       return {
-        ...state,
-        user: {
-          ...state.user,
-          tokens: {
-            ...action.payload,
-          },
-          isAuth: true,
+        ...user,
+        tokens: {
+          ...action.payload,
         },
+        isAuth: true,
       };
 
     case LOGOUT:
       return {
-        ...state,
+        ...user,
         user: {
           name: '',
           isAuth: false,
@@ -29,15 +26,12 @@ const userReducer = (state = [], action) => {
 
     case SET_NAME:
       return {
-        ...state,
-        user: {
-          ...state.user,
-          name: action.payload.name,
-        },
+        ...user,
+        name: action.payload.name,
       };
 
     default:
-      return state;
+      return user;
   }
 };
 

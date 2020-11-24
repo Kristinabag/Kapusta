@@ -1,15 +1,13 @@
 import { LOGIN, LOGOUT, SET_NAME } from '../types/user';
 
 const ACTION_CREATORS = {
-  LOGIN: (tokens) => {
-    console.log('ACTION_CREATOR_LOGIN', tokens);
-    return {
-      type: LOGIN,
-      payload: {
-        ...tokens,
-      },
-    };
-  },
+  LOGIN: (tokens) => ({
+    type: LOGIN,
+    payload: {
+      ...tokens,
+    },
+  }),
+
   LOGOUT: () => ({ type: LOGOUT }),
   // LOGOUT: () => {
   //   return {type: LOGOUT}
