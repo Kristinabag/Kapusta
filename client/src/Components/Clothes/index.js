@@ -64,9 +64,9 @@ function Clothes() {
         <img src="./img/ugg.png" />
       </div>
       <div> */}
-        {!!clothes.length && clothes.map(
+        {/* {!!clothes.length && clothes.map(
           (el) => <img key={el._id} src={el.imgUrl} alt={el.name} />,
-        )}
+        )} */}
         <ClothesSet />
       </div>
     </div>
