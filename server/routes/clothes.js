@@ -31,25 +31,28 @@ const ClothingItem = require('../models/clothingItem');
 const router = express.Router();
 
 router
-  .get('/:activity/:temperature/:weatherType', async (req, res) => {
-    const { activity, temperature, weatherType } = req.params;
-    const { user } = req.body;
-    if (user && user.email) {
+  .post('/', async (req, res) => {
+    const {
+      activityFor, weatherFor, temperatureFor, wardrobeType, user,
+    } = req.body;
+    if (user && user.name && wardrobeType === 'myWardrobe') {
       const clothes = await ClothingItem.find({
         // user: user._id,
-        user: user.email,
-        activityFor: activity,
-        weatherFor: weatherType,
-        temperatureFor: temperature,
+        user: user.name,
+        activityFor,
+        weatherFor,
+        temperatureFor,
       });
+      console.log('clothes: ', clothes);
       res.json(clothes);
-    } else if (user) {
+    } else if (user && wardrobeType === 'default') {
       const clothes = await ClothingItem.find({
         user: 'defaultUser',
-        activityFor: activity,
-        weatherFor: weatherType,
-        temperatureFor: temperature,
+        activityFor,
+        weatherFor,
+        temperatureFor,
       });
+      console.log('clothes: ', clothes);
       res.json(clothes);
     }
   })
