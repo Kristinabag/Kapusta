@@ -3,17 +3,9 @@ import { ADD_CLOTH_ITEM_SAGA } from '../../types/clothes';
 import { addClothItem } from '../../actions/clothes';
 
 function addCloth(params) {
-  const {
-    itemName, itemType, activity, temperatureFor, weatherFor, layer, picture,
-  } = params;
   return fetch(`${process.env.REACT_APP_API_URL}/clothes/new`, {
     method: 'POST',
-    headers: {
-      // 'Content-Type': 'multipart/form-data',
-    },
-    body: JSON.stringify({
-      itemName, itemType, activity, temperatureFor, weatherFor, layer, picture,
-    }),
+    body: params,
   })
     .then((res) => res.json());
 }
