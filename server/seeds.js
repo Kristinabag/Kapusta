@@ -367,6 +367,15 @@ async function seedBase() {
       imgUrl: './img/pantsCasual.png',
     }),
     new ClothingItem({
+      name: 'thermal pants',
+      type: 'bottom',
+      weatherFor: ['clear', 'clouds', 'rain', 'snow'],
+      temperatureFor: ['freeze', 'extraFreeze'],
+      activityFor: ['work-informal', 'work-office', 'leasure-goingout', 'leasure-walking', 'sport-winter', 'sport-hiking', 'sport-cycling'],
+      layer: 1,
+      imgUrl: './img/pantsThermo.png',
+    }),
+    new ClothingItem({
       name: 'shorts',
       type: 'bottom',
       weatherFor: ['clear', 'clouds', 'rain'],
