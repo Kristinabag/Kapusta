@@ -1,13 +1,13 @@
 import { useSelector } from 'react-redux';
 import style from './style.module.css';
 
-function Loader() {
-  const show = useSelector((state) => state.loader);
+function ClothesLoader() {
+  const loaders = useSelector((state) => state.loaders);
 
   return (
     <>
       {
-      show
+      loaders.clothes
       && (
       <div className={style.loaderWr}>
         <div className={style['lds-dual-ring']} />
@@ -18,4 +18,4 @@ function Loader() {
   );
 }
 
-export default Loader;
+export default ClothesLoader;
