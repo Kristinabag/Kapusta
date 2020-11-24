@@ -39,3 +39,23 @@ body {
   text-decoration: none;
   background-color: #ecf0f1;
 }
+
+.form {
+  flex-grow:10;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.signup {
+  width: 400px;
+}
+
+.signup input {
+  margin: 10px;
+}
+
+.signup button {
+  width: 250px;
+}
