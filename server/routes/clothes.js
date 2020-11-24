@@ -1,12 +1,13 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
+const ClothingItem = require('../models/clothingItem');
+const User = require('../models/user');
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {
     cb(null, '../client/public/img/');
   },
-  // dest: '../client/public/img/',
   filename(req, file, cb) {
     cb(null, `${file.originalname.split('.')[0]}${Date.now()}${path.extname(file.originalname)}`);
   },
@@ -25,8 +26,6 @@ const upload = multer({
     return cb(null, false);
   },
 });
-
-const ClothingItem = require('../models/clothingItem');
 
 const router = express.Router();
 
@@ -61,10 +60,11 @@ router
       const {
         user, name, type, activityFor, temperatureFor, weatherFor, layer,
       } = req.body;
-      const dbUser = await user.findOne({ email: user.email });
+      console.log(req.body);
+      const dbUser = await User.findOne({ name: JSON.parse(user).name });
       const cloth = new ClothingItem({
         // user: dbUser._id,
-        user: dbUser.email,
+        user: dbUser.name,
         name,
         type,
         weatherFor: JSON.parse(weatherFor),
