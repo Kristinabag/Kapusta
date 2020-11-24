@@ -19,7 +19,7 @@ function WardrobeForm() {
   const onFormSubmit = (e) => {
     e.preventDefault();
     const formdata = new FormData();
-    formdata.append('user', user);
+    formdata.append('user', JSON.stringify(user));
     formdata.append('name', name);
     formdata.append('type', type);
     formdata.append('activityFor', JSON.stringify(activityFor));
@@ -28,7 +28,6 @@ function WardrobeForm() {
     if (layer) formdata.append('layer', layer);
     // formdata.append('layer', clothForm.current.layer.value);
     formdata.append('file', clothForm.current.picture.files[0]);
-    console.log('formdata: ', formdata);
     dispatch(addClothItemSaga(formdata));
   };
 
