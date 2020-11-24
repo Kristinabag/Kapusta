@@ -14,10 +14,10 @@ function Clothes() {
   const wardrobeType = useSelector((state) => state.wardrobeType);
   const user = useSelector((state) => state.user);
 
-  console.log('clothes:', clothes);
-  console.log('activity:', activity);
-  console.log('wardrobeType:', wardrobeType);
-  console.log('user:', user);
+  // console.log('clothes:', clothes);
+  // console.log('activity:', activity);
+  // console.log('wardrobeType:', wardrobeType);
+  // console.log('user:', user);
 
   const [weatherType, setWeatherType] = useState('');
   const [temperatureType, setTemperatureType] = useState('');
