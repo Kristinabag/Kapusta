@@ -6,3 +6,9 @@
 .nav-link {
   max-width: 90%;
 }
+
+.visible {
+  opacity: 0.5;
+}
+
+

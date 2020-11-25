@@ -1,7 +1,14 @@
 import emailjs from 'emailjs-com';
 import './style.css';
+import { useHistory } from 'react-router-dom';
 
 function Contacts() {
+  const history = useHistory();
+
+  const goBack = () => {
+    history.goBack();
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -24,6 +31,7 @@ function Contacts() {
         <textarea className="form-control my1" rows="4" name="message" placeholder="Type your message here ..." />
         <button type="submit" className="btn btn-primary my-1">Submit</button>
       </form>
+      <button onClick={goBack} type="button" className="btn btn-primary my-1">Назад</button>
     </div>
   );
 }
