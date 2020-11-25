@@ -16,7 +16,8 @@ function ClothesTop({ clothes }) {
   const [accessory, setAccessory] = useState([]);
   /* loading redux data */
   const loaders = useSelector((state) => state.loaders); // if clothes loaded then display them otherwise display loader
-  /* to change loder status */
+  const renewToggle = useSelector((state) => state.renewToggle);
+  /* to change loader status */
   const dispatch = useDispatch();
 
   console.log('clothes component', clothes);
@@ -99,7 +100,7 @@ function ClothesTop({ clothes }) {
       setAccessory([layerAccessories.splice(Math.floor(Math.random() * layerAccessories.length), 1)[0], layerAccessories.splice(Math.floor(Math.random() * layerAccessories.length), 1)[0]]);
       dispatch(removeClothesLoader());
     }
-  }, [clothes]);
+  }, [clothes, renewToggle]);
 
   return (
     <>
