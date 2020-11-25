@@ -2,11 +2,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Weather from './Components/Weather';
-import Main from './Components/Main';
+// import Main from './Components/Main';
 import './index.css';
 import SignIn from './Components/SignIn';
 import SignUp from './Components/SignUp';
 import BGImage from './Components/BGImage';
+import Contacts from './Components/Contacts';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <Router>
         <Header />
         <Weather />
-        <Main />
+        {/* <Main /> */}
+        <Contacts />
         <Footer />
         <Switch>
           <Route exact path="/signin">
@@ -31,8 +33,6 @@ function App() {
               <PrivateRoute exact path="/info">
             <Info />
           </PrivateRoute> */}
-
-          <Route path="/">Page 404</Route>
         </Switch>
         <BGImage />
       </Router>
