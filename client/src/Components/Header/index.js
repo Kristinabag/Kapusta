@@ -1,4 +1,4 @@
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as RiIcons from 'react-icons/ri';
 import * as IoIcons from 'react-icons/io';
 import { useSelector, useDispatch } from 'react-redux';
@@ -8,17 +8,12 @@ import changeWardrobeType from '../../redux/actions/wardrobeType';
 
 function Header() {
   const user = useSelector((state) => state.user);
-  const history = useHistory();
-  // const location = useLocation();
   const dispatch = useDispatch();
-
-  // const { from } = location.state || { from: { pathname: '/' } };
 
   const logout = () => {
     dispatch(ACTION_CREATORS.LOGOUT());
     dispatch(changeWardrobeType('default'));
     localStorage.removeItem('user');
-    history.replace();
   };
 
   return (
@@ -37,7 +32,7 @@ function Header() {
                   <span> Гардероб</span>
                 </button>
               </Link>
-              <Link to="/logout">
+              <Link to="/">
                 <button onClick={logout} type="button" className="btn btn-outline-primary mx-1">
                   <IoIcons.IoMdExit />
                   <span>Выйти</span>
