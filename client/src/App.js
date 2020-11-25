@@ -34,8 +34,8 @@ function App() {
 
           <Route path="/">Page 404</Route>
         </Switch>
-        <BGImage />
       </Router>
+      <BGImage />
     </>
   );
 }
