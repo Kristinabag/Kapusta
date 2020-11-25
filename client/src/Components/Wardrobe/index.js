@@ -60,22 +60,29 @@ function Wardrobe() {
   }, [activity, dispatch, temperatureType, weatherType, wardrobeType]);
 
   return (
-    <div className="wardrobe">
+    <div className="d-flex-column justify-content-between">
+      <h4>Мой гардероб</h4>
+      <Link to="/wardrobe/add">
+        <button type="button" className="btn btn-light mx-1 navLink">
+          Добавить одежду в гардероб
+        </button>
+      </Link>
       {!!clothes.length
-        && clothes.map((el) => (
-          <div className="pic">
-            <img key={el._id} src={el.imgUrl} alt={el.name} />
+        && (
+          <div className="wardrobe">
+            {
+          clothes.map((el) => (
+            <div className="pic" key={el._id}>
+              <img src={el.imgUrl} alt={el.name} />
+            </div>
+          ))
+        }
           </div>
-        ))}
+        )}
       {!clothes.length
       && (
       <div className="d-flex-column justify-content-between">
         <h4>Гардероб пуст</h4>
-        <Link to="/wardrobe/add">
-          <button type="button" className="btn btn-light mx-1 navLink">
-            Добавить одежду в гардероб
-          </button>
-        </Link>
       </div>
       )}
     </div>

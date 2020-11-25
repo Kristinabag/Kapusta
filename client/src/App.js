@@ -22,16 +22,16 @@ function App() {
             <SignIn />
           </Route>
 
-          <Route exact path="/">
-            <Main />
-          </Route>
-
           <Route exact path="/signup">
             <SignUp />
           </Route>
 
           <Route exact path="/contacts">
             <Contacts />
+          </Route>
+
+          <Route path="/">
+            <Main />
           </Route>
 
         </Switch>
