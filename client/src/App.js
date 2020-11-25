@@ -6,6 +6,7 @@ import Main from './Components/Main';
 import './index.css';
 import SignIn from './Components/SignIn';
 import SignUp from './Components/SignUp';
+import BGImage from './Components/BGImage';
 
 function App() {
   return (
@@ -31,11 +32,9 @@ function App() {
             <Info />
           </PrivateRoute> */}
 
-          <Route path="/">
-            Page 404
-          </Route>
-
+          <Route path="/">Page 404</Route>
         </Switch>
+        <BGImage />
       </Router>
     </>
   );
