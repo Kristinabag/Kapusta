@@ -6,6 +6,7 @@ import Main from './Components/Main';
 import './index.css';
 import SignIn from './Components/SignIn';
 import SignUp from './Components/SignUp';
+import Contacts from './Components/Contacts';
 
 function App() {
   return (
@@ -13,26 +14,23 @@ function App() {
       <Router>
         <Header />
         <Weather />
-        <Main />
         <Footer />
+
         <Switch>
           <Route exact path="/signin">
             <SignIn />
+          </Route>
+
+          <Route exact path="/">
+            <Main />
           </Route>
 
           <Route exact path="/signup">
             <SignUp />
           </Route>
 
-          {/* <Route exact path="/logout">
-                {user ? <Redirect to="/" /> : <WardrobeForm />}
-              </Route>
-              <PrivateRoute exact path="/info">
-            <Info />
-          </PrivateRoute> */}
-
-          <Route path="/">
-            Page 404
+          <Route exact path="/contacts">
+            <Contacts />
           </Route>
 
         </Switch>
