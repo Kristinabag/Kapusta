@@ -261,7 +261,7 @@ function WardrobeForm() {
 
         <input type="file" name="picture" className="btn btn-light mx-1 navLink" />
 
-        <button type="submit" className="btn btn-light mx-1 navLink">Добавить в гарероб</button>
+        <button type="submit" className="btn btn-light mx-1 navLink">Добавить в гардероб</button>
       </form>
     </>
   );
