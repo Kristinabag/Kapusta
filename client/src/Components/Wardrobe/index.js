@@ -11,6 +11,7 @@ function Wardrobe() {
   const weather = useSelector((state) => state.weather);
   const clothes = useSelector((state) => state.clothes);
   const activity = useSelector((state) => state.activity);
+  const wardrobeType = 'myWardrobe';
   const dispatch = useDispatch();
 
   const [weatherType, setWeatherType] = useState('');
@@ -46,17 +47,37 @@ function Wardrobe() {
 
   useEffect(() => {
     if (user && temperatureType && weatherType) {
-      dispatch(loadClothesSaga([user, activity, temperatureType, weatherType]));
+      dispatch(
+        loadClothesSaga([
+          activity,
+          temperatureType,
+          weatherType,
+          wardrobeType,
+          user,
+        ]),
+      );
     }
-  }, [activity, dispatch, temperatureType, weatherType]);
+  }, [activity, dispatch, temperatureType, weatherType, wardrobeType]);
 
   return (
-    <div className="Clothes">
+    <div className="wardrobe">
       {!!clothes.length
-        && clothes.map((el) => <img key={el._id} src={el.imgUrl} alt={el.name} />)}
-      <Link to="/wardrobe/add">
-        <button type="button">Добавить новую одежду в гардероб</button>
-      </Link>
+        && clothes.map((el) => (
+          <div className="pic">
+            <img key={el._id} src={el.imgUrl} alt={el.name} />
+          </div>
+        ))}
+      {!clothes.length
+      && (
+      <div className="d-flex-column justify-content-between">
+        <h4>Гардероб пуст</h4>
+        <Link to="/wardrobe/add">
+          <button type="button" className="btn btn-light mx-1 navLink">
+            Добавить одежду в гардероб
+          </button>
+        </Link>
+      </div>
+      )}
     </div>
   );
 }

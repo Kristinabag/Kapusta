@@ -22,3 +22,18 @@
   height: 100px;
 
 }
+
+.pic {
+  height: 90px;
+  width: fit-content;
+}
+
+.pic img {
+  height: 100%;
+  width: auto;
+}
+
+.wardrobe {
+  display: flex;
+  flex-wrap: wrap;
+}

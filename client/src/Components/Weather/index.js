@@ -17,8 +17,6 @@ function Weather() {
     setDate(dateBuilder(d));
   }, []);
 
-  console.log(loaders);
-
   return (
     <>
       {

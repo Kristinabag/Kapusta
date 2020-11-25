@@ -9,7 +9,7 @@ import ClothesSet from '../ClothesSet';
 function Clothes() {
   const dispatch = useDispatch();
   const weather = useSelector((state) => state.weather);
-  // const clothes = useSelector((state) => state.clothes);
+  const clothes = useSelector((state) => state.clothes);
   const activity = useSelector((state) => state.activity);
   const wardrobeType = useSelector((state) => state.wardrobeType);
   const user = useSelector((state) => state.user);
@@ -67,7 +67,7 @@ function Clothes() {
         {/* {!!clothes.length && clothes.map(
           (el) => <img key={el._id} src={el.imgUrl} alt={el.name} />,
         )} */}
-        <ClothesSet />
+        <ClothesSet clothes={clothes} />
       </div>
     </div>
   );

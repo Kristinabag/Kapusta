@@ -1,10 +1,12 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-nested-ternary */
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { removeClothesLoader } from '../../redux/actions/loader';
 import ClothesLoader from '../Loader/ClothesLoader';
 
-function ClothesTop() {
+function ClothesTop({ clothes }) {
   /* all states neccessary for rendering clothes */
   const [hat, setHat] = useState({});
   const [scarf, setScarf] = useState({});
@@ -13,7 +15,6 @@ function ClothesTop() {
   const [shoes, setShoes] = useState([]);
   const [accessory, setAccessory] = useState([]);
   /* loading redux data */
-  const clothes = useSelector((state) => state.clothes);
   const loaders = useSelector((state) => state.loaders); // if clothes loaded then display them otherwise display loader
   /* to change loder status */
   const dispatch = useDispatch();
@@ -140,7 +141,14 @@ function ClothesTop() {
               </div>
             </div>
           </div>
-        ) : <div>Гардероб пуст</div>
+        ) : (
+          <div>
+            <h4>Гардероб пуст</h4>
+            <Link to="/wardrobe/add">
+              <button type="button" className="btn btn-light mx-1 navLink">Добавить новую одежду в гардероб</button>
+            </Link>
+          </div>
+        )
       }
     </>
   );
