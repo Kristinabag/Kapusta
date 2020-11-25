@@ -18,7 +18,7 @@ function Contacts() {
     <div className="contacts">
       <h1>Contact Us</h1>
       <form className="d-flex flex-column justify-content-center" onSubmit={sendEmail}>
-        <input type="text" className="form-control my-1" placeholder="Your name ..." name="name" />
+        <input type="text" className="form-control my-1" placeholder="Введите имя ..." name="name" />
         <input type="email" className="form-control my-1" placeholder="Email ..." name="email" />
         <input type="text" className="form-control my-1" placeholder="Subject ..." name="subject" />
         <textarea className="form-control my1" rows="4" name="message" placeholder="Type your message here ..." />
