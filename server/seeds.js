@@ -162,7 +162,7 @@ async function seedBase() {
       name: 'vest',
       type: 'top',
       weatherFor: ['clear', 'clouds', 'rain', 'snow'],
-      temperatureFor: ['cold', 'freeze', 'extraFreeze'],
+      temperatureFor: ['freeze', 'extraFreeze'],
       activityFor: ['chilling-at-home', 'work-informal', 'leasure-goingout', 'leasure-walking', 'sport-winter', 'sport-jogging', 'sport-hiking'],
       layer: 1,
       imgUrl: './img/vest.png',
