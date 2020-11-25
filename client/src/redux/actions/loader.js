@@ -1,14 +1,26 @@
-const { ADD, REMOVE } = require('../types/loader');
+const {
+  ADD_WEATHER_LOADER, REMOVE_WEATHER_LOADER, ADD_CLOTHES_LOADER, REMOVE_CLOTHES_LOADER,
+} = require('../types/loader');
 
-const addLoader = () => ({
-  type: ADD,
+const addWeatherLoader = () => ({
+  type: ADD_WEATHER_LOADER,
 });
 
-const removeLoader = () => ({
-  type: REMOVE,
+const removeWeatherLoader = () => ({
+  type: REMOVE_WEATHER_LOADER,
+});
+
+const addClothesLoader = () => ({
+  type: ADD_CLOTHES_LOADER,
+});
+
+const removeClothesLoader = () => ({
+  type: REMOVE_CLOTHES_LOADER,
 });
 
 export {
-  addLoader,
-  removeLoader,
+  addWeatherLoader,
+  removeWeatherLoader,
+  addClothesLoader,
+  removeClothesLoader,
 };

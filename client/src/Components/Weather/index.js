@@ -7,7 +7,7 @@ import dateBuilder from '../../helpers/dateBuilder';
 function Weather() {
   const dispatch = useDispatch();
   const weather = useSelector((state) => state.weather);
-  const loader = useSelector((state) => state.loader);
+  const loaders = useSelector((state) => state.loaders);
 
   const [date, setDate] = useState('');
 
@@ -20,7 +20,7 @@ function Weather() {
   return (
     <>
       {
-        loader
+        loaders.weather
           ? (
             <div className={style.loaderWr}>
               <div className={style['lds-dual-ring']} />

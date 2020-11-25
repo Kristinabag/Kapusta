@@ -7,6 +7,7 @@ import './index.css';
 import SignIn from './Components/SignIn';
 import SignUp from './Components/SignUp';
 import Contacts from './Components/Contacts';
+import BGImage from './Components/BGImage';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
 
         </Switch>
       </Router>
+      <BGImage />
     </>
   );
 }

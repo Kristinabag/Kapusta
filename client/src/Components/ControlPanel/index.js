@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import chooseActivity from '../../redux/actions/activity';
 import changeWardrobeType from '../../redux/actions/wardrobeType';
+import Recommendation from '../Recommendation';
 
 function ControlPanel() {
   const dispatch = useDispatch();
@@ -125,17 +126,7 @@ function ControlPanel() {
         </>
       )}
 
-      <div className="recomendation">
-        <div className="card border-dark mb-3">
-          <div className="card-header">Рекомендации</div>
-          <div className="card-body">
-            <p className="card-text">
-              Сегодня ветрено, поэтому оденься теплее и не забудь зонт, возможны
-              осадки.
-            </p>
-          </div>
-        </div>
-      </div>
+      <Recommendation />
     </div>
   );
 }

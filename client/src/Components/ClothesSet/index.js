@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-nested-ternary */
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addLoader, removeLoader } from '../../redux/actions/loader';
-import Loader from '../Loader/Loader';
+import { Link } from 'react-router-dom';
+import { removeClothesLoader } from '../../redux/actions/loader';
+import ClothesLoader from '../Loader/ClothesLoader';
 
-function ClothesTop() {
+function ClothesTop({ clothes }) {
   /* all states neccessary for rendering clothes */
   const [hat, setHat] = useState({});
   const [scarf, setScarf] = useState({});
@@ -12,13 +15,13 @@ function ClothesTop() {
   const [shoes, setShoes] = useState([]);
   const [accessory, setAccessory] = useState([]);
   /* loading redux data */
-  const clothes = useSelector((state) => state.clothes);
-  const loader = useSelector((state) => state.loader); // if clothes loaded then display them otherwise display loader
+  const loaders = useSelector((state) => state.loaders); // if clothes loaded then display them otherwise display loader
   /* to change loder status */
   const dispatch = useDispatch();
 
+  console.log('clothes component', clothes);
   useEffect(() => {
-    dispatch(addLoader());
+    // dispatch(addClothesLoader());
     const layerHat = [];
     const layerScraf = [];
     const layerOneTop = [];
@@ -94,16 +97,17 @@ function ClothesTop() {
       setBottom([layerOneBottom[Math.floor(Math.random() * layerOneBottom.length)], layerTwoBottom[Math.floor(Math.random() * layerTwoBottom.length)]]);
       setShoes([layerOneShoes[Math.floor(Math.random() * layerOneShoes.length)], layerTwoShoes[Math.floor(Math.random() * layerTwoShoes.length)]]);
       setAccessory([layerAccessories.splice(Math.floor(Math.random() * layerAccessories.length), 1)[0], layerAccessories.splice(Math.floor(Math.random() * layerAccessories.length), 1)[0]]);
-      dispatch(removeLoader());
+      dispatch(removeClothesLoader());
     }
   }, [clothes]);
 
   return (
     <>
       {
-      loader ? <Loader />
-        : (
+      loaders.clothes ? <ClothesLoader />
+        : clothes?.length ? (
           <div className="d-flex justify-content-between">
+
             <div className="d-flex flex-column align-items-center mx-2">
               <h4>Accessories</h4>
               <div className="d-flex flex-column align-items-center">
@@ -136,6 +140,13 @@ function ClothesTop() {
                 </div>
               </div>
             </div>
+          </div>
+        ) : (
+          <div>
+            <h4>Гардероб пуст</h4>
+            <Link to="/wardrobe/add">
+              <button type="button" className="btn btn-light mx-1 navLink">Добавить новую одежду в гардероб</button>
+            </Link>
           </div>
         )
       }

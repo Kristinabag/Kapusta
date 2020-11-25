@@ -1,6 +1,6 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { LOAD_WEATHER } from '../../types/weather';
-import { addLoader, removeLoader } from '../../actions/loader';
+import { addWeatherLoader, removeWeatherLoader } from '../../actions/loader';
 import { addWeather } from '../../actions/weather';
 
 function getWeather(coordinates) {
@@ -16,10 +16,10 @@ function getWeather(coordinates) {
 }
 
 function* workerWeatherLoad(queryObj) {
-  yield put(addLoader()); // put ~= dispatch
+  yield put(addWeatherLoader()); // put ~= dispatch
   const weatherData = yield call(getWeather, queryObj.payload);
   yield put(addWeather(weatherData));
-  yield put(removeLoader());
+  yield put(removeWeatherLoader());
 }
 
 export default function* watcherWeatherLoad() {
