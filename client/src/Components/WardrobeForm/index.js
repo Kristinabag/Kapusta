@@ -1,4 +1,3 @@
-import './style.css';
 import { useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addClothItemSaga } from '../../redux/actions/clothes';
@@ -32,10 +31,10 @@ function WardrobeForm() {
   };
 
   return (
-    <form id="clothForm" ref={clothForm} onSubmit={onFormSubmit}>
+    <form id="clothForm" className="form-group" ref={clothForm} onSubmit={onFormSubmit}>
       <input
         onChange={(e) => setName(e.target.value)}
-        className="list-group-item"
+        className="form-control"
         type="text"
         placeholder="Название предмета гардероба"
         name="name"
@@ -44,7 +43,7 @@ function WardrobeForm() {
 
       <select
         onChange={(e) => setType(e.target.value)}
-        className="nav-link dropdown-toggle"
+        className="form-control dropdown-toggle"
         data-toggle="dropdown"
         name="type"
         value={type}
@@ -84,7 +83,7 @@ function WardrobeForm() {
             Array.from(e.target.selectedOptions).map((el) => el.value),
           );
         }}
-        className="nav-link dropdown-toggle"
+        className="form-control dropdown-toggle"
         data-toggle="dropdown"
         multiple
         name="activityFor"
@@ -126,7 +125,7 @@ function WardrobeForm() {
         onChange={(e) => setTemperatureFor(
           Array.from(e.target.selectedOptions).map((el) => el.value),
         )}
-        className="nav-link dropdown-toggle"
+        className="form-control dropdown-toggle"
         data-toggle="dropdown"
         multiple
         name="temperatureFor"
@@ -156,7 +155,7 @@ function WardrobeForm() {
         onChange={(e) => setWeatherFor(
           Array.from(e.target.selectedOptions).map((el) => el.value),
         )}
-        className="nav-link dropdown-toggle"
+        className="form-control dropdown-toggle"
         data-toggle="dropdown"
         multiple
         name="weatherFor"
@@ -184,7 +183,7 @@ function WardrobeForm() {
           if (type === 'accessory' || type === 'hat') setLayer(null);
           setLayer(e.target.value);
         }}
-        className="nav-link dropdown-toggle"
+        className="form-control dropdown-toggle"
         data-toggle="dropdown"
         name="layer"
         value={layer}
@@ -212,9 +211,9 @@ function WardrobeForm() {
         </option>
       </select>
 
-      <input type="file" name="picture" />
+      <input type="file" name="picture" className="btn btn-light mx-1 navLink" />
 
-      <button type="submit">Добавить в гарероб</button>
+      <button type="submit" className="btn btn-light mx-1 navLink">Добавить в гарероб</button>
     </form>
   );
 }
