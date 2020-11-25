@@ -62,17 +62,17 @@ function WardrobeForm() {
         <option className="m-1" value="shoes">
           Обувь, носки
         </option>
-        <option className="m-1" value="accessory">
-          Аксессуар
+        <option className="m-1" value="accessory-bag">
+          Сумка
         </option>
-        <option className="m-1" value="sport-cycling">
-          Велопрогулка
+        <option className="m-1" value="accessory-glasses">
+          Очки
         </option>
-        <option className="m-1" value="sport-winter">
-          Зимние виды спорта
+        <option className="m-1" value="accessory-belt">
+          Ремень
         </option>
-        <option className="m-1" value="sport-hiking">
-          Треккинг
+        <option className="m-1" value="accessory-gloves">
+          Перчатки
         </option>
       </select>
 
@@ -194,7 +194,7 @@ function WardrobeForm() {
           1 (майка, нижняя футболка / носки)
         </option>
         <option className="m-1" value={2}>
-          2 (футболка / обувь)
+          2 (футболка / брюки / обувь)
         </option>
         <option className="m-1" value={3}>
           3 (рубашка)
