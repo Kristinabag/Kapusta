@@ -25,7 +25,6 @@ function WardrobeForm() {
     formdata.append('weatherFor', JSON.stringify(weatherFor));
     formdata.append('temperatureFor', JSON.stringify(temperatureFor));
     if (layer) formdata.append('layer', layer);
-    // formdata.append('layer', clothForm.current.layer.value);
     formdata.append('file', clothForm.current.picture.files[0]);
     dispatch(addClothItemSaga(formdata));
   };

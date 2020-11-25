@@ -4,6 +4,7 @@ import * as IoIcons from 'react-icons/io';
 import { useSelector, useDispatch } from 'react-redux';
 import style from './style.module.css';
 import ACTION_CREATORS from '../../redux/actions/user';
+import changeWardrobeType from '../../redux/actions/wardrobeType';
 
 function Header() {
   const user = useSelector((state) => state.user);
@@ -15,6 +16,7 @@ function Header() {
 
   const logout = () => {
     dispatch(ACTION_CREATORS.LOGOUT());
+    dispatch(changeWardrobeType('default'));
     localStorage.removeItem('user');
     history.replace();
   };
