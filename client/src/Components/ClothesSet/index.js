@@ -17,7 +17,8 @@ function ClothesTop({ clothes }) {
   const [accessory, setAccessory] = useState([]);
   /* loading redux data */
   const loaders = useSelector((state) => state.loaders); // if clothes loaded then display them otherwise display loader
-  /* to change loder status */
+  const renewToggle = useSelector((state) => state.renewToggle);
+  /* to change loader status */
   const dispatch = useDispatch();
 
   console.log('clothes component', clothes);
@@ -87,20 +88,22 @@ function ClothesTop({ clothes }) {
           layerTwoShoes.push(el);
           return;
         }
-        if (el.type === 'accessory') {
+        if (el.type.slice(0, 9) === 'accessory') {
           layerAccessories.push(el);
         }
       });
+
+      const firstAccessory = layerAccessories.splice(Math.floor(Math.random() * layerAccessories.length), 1)[0];
       /* randomly forming clothing set from layers and types */
       setHat(layerHat[Math.floor(Math.random() * layerHat.length)]);
       setScarf(layerScraf[Math.floor(Math.random() * layerScraf.length)]);
       setTop([layerOneTop[Math.floor(Math.random() * layerOneTop.length)], layerTwoTop[Math.floor(Math.random() * layerTwoTop.length)], layerThreeTop[Math.floor(Math.random() * layerThreeTop.length)], layerFourTop[Math.floor(Math.random() * layerFourTop.length)], layerFiveTop[Math.floor(Math.random() * layerFiveTop.length)], layerSixTop[Math.floor(Math.random() * layerSixTop.length)]]);
       setBottom([layerOneBottom[Math.floor(Math.random() * layerOneBottom.length)], layerTwoBottom[Math.floor(Math.random() * layerTwoBottom.length)]]);
       setShoes([layerOneShoes[Math.floor(Math.random() * layerOneShoes.length)], layerTwoShoes[Math.floor(Math.random() * layerTwoShoes.length)]]);
-      setAccessory([layerAccessories.splice(Math.floor(Math.random() * layerAccessories.length), 1)[0], layerAccessories.splice(Math.floor(Math.random() * layerAccessories.length), 1)[0]]);
+      setAccessory([firstAccessory, layerAccessories.filter((el) => el.type.slice(-5) !== firstAccessory.type.slice(-5))[0]]);
       dispatch(removeClothesLoader());
     }
-  }, [clothes]);
+  }, [clothes, renewToggle]);
 
   return (
     <>

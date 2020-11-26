@@ -5,6 +5,7 @@ import activityReducer from './activity';
 import clothesReducer from './clothes';
 import userReducer from './user';
 import wardrobeTypeReduder from './wardrobeType';
+import renewToggleReducer from './renewToggle';
 
 const rootReducer = combineReducers({
   weather: weatherReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   loaders: loaderReducer,
   user: userReducer,
   wardrobeType: wardrobeTypeReduder,
+  renewToggle: renewToggleReducer,
 });
 
 export default rootReducer;

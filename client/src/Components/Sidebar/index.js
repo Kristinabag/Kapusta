@@ -1,23 +1,25 @@
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import * as RiIcons from 'react-icons/ri';
 import * as AiIcons from 'react-icons/ai';
 import * as FiIcons from 'react-icons/fi';
+import renewToggle from '../../redux/actions/renewToggle';
 import AutocompleteInput from '../AutocompleteInput';
 import './style.css';
 
 function Sidebar() {
   const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
 
   return (
     <>
       <div className="sidebar">
         <ul className="list-group list-group-flush">
           <AutocompleteInput />
-          <Link to="/" className="list-group-item navLink">
+          <button type="button" onClick={() => dispatch(renewToggle())} className="list-group-item navLink">
             <FiIcons.FiRefreshCcw />
             <span> Обновить вещи</span>
-          </Link>
+          </button>
           {user.name ? (
             <Link to="/wardrobe" className="list-group-item navLink">
               <RiIcons.RiTShirt2Line />

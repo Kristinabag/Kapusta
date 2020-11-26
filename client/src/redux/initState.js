@@ -14,6 +14,7 @@ const initState = () => {
     clothes: [],
     wardrobeType: 'default',
     user: JSON.parse(localStorage.getItem('user')) || defaultUser,
+    renewToggle: false,
     loaders: {
       weather: false,
       clothes: false,
