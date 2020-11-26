@@ -515,7 +515,6 @@ async function seedBase() {
     }),
   ];
 
-  // await mongoose.connection.dropDatabase();
   await ClothingItem.insertMany(clothes);
   await mongoose.disconnect();
 }
