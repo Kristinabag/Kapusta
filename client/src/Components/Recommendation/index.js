@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 function Recommendation() {
   const [weatherType, setWeatherType] = useState('');
   const [temperatureType, setTemperatureType] = useState('');
+  console.log(weatherType, temperatureType);
 
   const weather = useSelector((state) => state.weather);
 
@@ -13,14 +14,23 @@ function Recommendation() {
       const temperature = weather.main.temp;
       const weatherId = weather.weather[0].id;
 
-      const weathType = weatherId >= 200 && weatherId <= 531 ? 'rain'
-        : weatherId >= 600 && weatherId <= 622 ? 'snow'
-          : weatherId === 800 ? 'clear' : 'clouds';
+      const weathType = weatherId >= 200 && weatherId <= 531
+        ? 'rain'
+        : weatherId >= 600 && weatherId <= 622
+          ? 'snow'
+          : weatherId === 800
+            ? 'clear'
+            : 'clouds';
 
-      const tempType = temperature < -20 ? 'extraFreeze'
-        : temperature >= -20 && temperature < 1 ? 'freeze'
-          : temperature >= 1 && temperature < 11 ? 'cold'
-            : temperature >= 11 && temperature < 21 ? 'warm' : 'hot';
+      const tempType = temperature < -20
+        ? 'extraFreeze'
+        : temperature >= -20 && temperature < 0
+          ? 'freeze'
+          : temperature >= 0 && temperature < 11
+            ? 'cold'
+            : temperature >= 11 && temperature < 21
+              ? 'warm'
+              : 'hot';
 
       setWeatherType(weathType);
       setTemperatureType(tempType);
@@ -49,22 +59,26 @@ function Recommendation() {
                       ? 'Брррр... Какой же сегодня мороз... Оденься потепелее - посмотри, какие комплекты для этого подойдут!'
                       : weatherType === 'rain' && temperatureType === 'hot'
                         ? 'Сегодня прекрасный жаркий день, и летний дождь его не испортит! Из одежды понадобится самый минимум, главный аксессуар сегодня - зонт'
-                        : (weatherType === 'rain' && temperatureType === 'warm') || (weatherType === 'rain' && temperatureType === 'cold')
+                        : weatherType === 'rain'
+        && (temperatureType === 'warm'
+          || temperatureType === 'cold'
+          || temperatureType === 'freeze')
                           ? 'За окном дождь. Главный аксессуар сегодня - зонт'
-                          : (weatherType === 'snow' && temperatureType === 'cold') || (weatherType === 'snow' && temperatureType === 'freeze') || (weatherType === 'snow' && temperatureType === 'extraFreeze')
+                          : weatherType === 'snow'
+        && (temperatureType === 'cold'
+          || temperatureType === 'freeze'
+          || temperatureType === 'extraFreeze')
                             ? 'За окном настоящая зима - белая, снежная! Одевайся потеплее, и можно играть в снежки'
                             : '';
 
   return (
     weather && (
-    <div className="card border-dark mb-3">
-      <div className="card-header">Рекомендации</div>
-      <div className="card-body">
-        <p className="card-text">
-          {text}
-        </p>
+      <div className="card border-dark mb-3">
+        <div className="card-header">Рекомендации</div>
+        <div className="card-body">
+          <p className="card-text">{text}</p>
+        </div>
       </div>
-    </div>
     )
   );
 }

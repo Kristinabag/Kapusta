@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const clothingItemSchema = new mongoose.Schema({
   user: {
-    // type: mongoose.ObjectId,
     type: String,
     default: 'defaultUser',
   },

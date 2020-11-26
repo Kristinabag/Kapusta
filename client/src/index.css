@@ -1,15 +1,13 @@
 body {
   all: unset;
   background-image: url(https://cdn.pixabay.com/photo/2019/09/20/06/01/watercolor-background-4490904_1280.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   height: 100vh;
   font-family: Courier, Verdana, sans-serif;
 }
 
 #root {
-  /* background-image: url(https://avatanplus.com/files/resources/original/5784810963445155dd980cbf.jpg); */
-  /* background-position: center; */
   display: flex;
   flex-direction: column;
 }
@@ -17,8 +15,6 @@ body {
 
 .Clothes {
   flex-grow:1;
-  /* background-color: oldlace;
-  border: solid 1px black; */
   display: flex;
   flex-direction: column;
   align-items: center;
