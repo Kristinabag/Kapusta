@@ -11,7 +11,7 @@ function Sidebar() {
 
   return (
     <>
-      <div>
+      <div className="sidebar">
         <ul className="list-group list-group-flush">
           <AutocompleteInput />
           <Link to="/" className="list-group-item navLink">

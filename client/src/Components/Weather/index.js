@@ -27,7 +27,7 @@ function Weather() {
             </div>
           )
           : (
-            <div className={style.weather}>
+            <div className="weather">
               <div>
                 <span className={style.city}>{weather.name}</span>
                 {` - ${date}.`}

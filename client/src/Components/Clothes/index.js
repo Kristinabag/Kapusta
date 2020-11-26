@@ -14,11 +14,6 @@ function Clothes() {
   const wardrobeType = useSelector((state) => state.wardrobeType);
   const user = useSelector((state) => state.user);
 
-  // console.log('clothes:', clothes);
-  // console.log('activity:', activity);
-  // console.log('wardrobeType:', wardrobeType);
-  // console.log('user:', user);
-
   const [weatherType, setWeatherType] = useState('');
   const [temperatureType, setTemperatureType] = useState('');
 
@@ -49,27 +44,9 @@ function Clothes() {
   [activity, dispatch, temperatureType, weatherType, wardrobeType]);
 
   return (
-    <div className="Clothes">
-      <div className="head type">
-        {/* <img src="./img/hatWarm.png" />
-      </div>
-      <div className="body type">
-        <img src="./img/jacketRain.png" />
-
-      </div>
-      <div className="legs type">
-        <img src="./img/pants.png" />
-      </div>
-      <div className="boots type">
-        <img src="./img/ugg.png" />
-      </div>
-      <div> */}
-        {/* {!!clothes.length && clothes.map(
-          (el) => <img key={el._id} src={el.imgUrl} alt={el.name} />,
-        )} */}
-        <ClothesSet clothes={clothes} />
-      </div>
-    </div>
+    <>
+      <ClothesSet clothes={clothes} />
+    </>
   );
 }
 

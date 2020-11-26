@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import * as RiIcons from 'react-icons/ri';
 import * as IoIcons from 'react-icons/io';
 import { useSelector, useDispatch } from 'react-redux';
-import style from './style.module.css';
+// import style from './style.module.css';
 import ACTION_CREATORS from '../../redux/actions/user';
 import changeWardrobeType from '../../redux/actions/wardrobeType';
 
@@ -17,7 +17,7 @@ function Header() {
   };
 
   return (
-    <div className={style.header}>
+    <div className="header">
       <div className="d-flex">
         <Link className="navbar-brand" to="/">Главная</Link>
       </div>

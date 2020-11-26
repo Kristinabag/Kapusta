@@ -1,0 +1,42 @@
+.accessories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.377);
+}
+
+.clothingSet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.377);
+}
+
+.imgContainer {
+  flex-grow: 1;
+}
+
+.headItem img {
+  height: 10vh;
+  min-height: 100px;
+}
+
+.bodyClothes img {
+  height: 20vh;
+  min-height: 150px;
+}
+
+.pant img {
+  height: 30vh;
+  min-height: 225px;
+}
+
+.shoose img {
+  height: 13vh;
+  min-height: 100px;
+}
+
+.accessoriesDiv img {
+  height: 13vh;
+  min-height: 100px;
+}

@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-grow: 1;
+  padding: 10px;
+  min-width: 1600px;
+}
+
+.clothes {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
