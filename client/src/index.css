@@ -3,17 +3,16 @@ body {
   background-image: url(https://cdn.pixabay.com/photo/2019/09/20/06/01/watercolor-background-4490904_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: 1600px; */
-  height: 100vh;
   font-family: Courier, Verdana, sans-serif;
-  min-width: 1600px;
+  min-width: 1550px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-width: 1600px;
+  min-width: 1550px;
+
 }
 
 .header {
@@ -24,7 +23,7 @@ body {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: rgba(99, 110, 114,1.0);
-  min-width: 1600px;
+  min-width: 1550px;
 }
 
 .weather { 
@@ -35,12 +34,13 @@ body {
   padding: 5px;
   color: rgba(99, 110, 114,1.0);
   margin-bottom: 10px;
+  min-width: 1550px;
 }
 
 .containerMain {
   flex-grow: 1;
   display: flex;
-  min-width: 1600px;
+  min-width: 1550px;
 }
 
 .footer {
@@ -51,7 +51,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 1600px;
+  min-width: 1550px;
 }
 
 

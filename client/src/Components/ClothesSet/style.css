@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.377);
+  margin-right: 10px;
 }
 
 .clothingSet {
@@ -17,26 +18,26 @@
 }
 
 .headItem img {
-  height: 10vh;
-  min-height: 100px;
+  max-height: 100px;
+  min-width: auto;
 }
 
 .bodyClothes img {
-  height: 20vh;
-  min-height: 150px;
+  max-height: 200px;
+  width: auto;
 }
 
 .pant img {
-  height: 30vh;
-  min-height: 225px;
+  max-height: 300px;
+  width: auto;
 }
 
 .shoose img {
-  height: 13vh;
-  min-height: 100px;
+  max-height: 150px;
+  width: auto;
 }
 
 .accessoriesDiv img {
-  height: 13vh;
-  min-height: 100px;
+  max-height: 150px;
+  width: auto;
 }

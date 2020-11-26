@@ -2,11 +2,12 @@
   display: flex;
   flex-grow: 1;
   padding: 10px;
-  min-width: 1600px;
+  min-width: 1550px;
+  justify-content: space-between;
 }
 
 .clothes {
-  flex-grow: 1;
+
   display: flex;
   justify-content: space-evenly;
 }
