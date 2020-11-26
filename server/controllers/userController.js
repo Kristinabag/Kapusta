@@ -57,10 +57,10 @@ const registration = async (req, res) => {
       return res.json(userDstructurization(newUser));
     } catch (error) {
       console.log(error);
-      return res.status(422).json({ message: 'Email already exists in system' });
+      return res.status(409).json({ message: 'Email already exists in system' });
     }
   }
-  return res.sendStatus(204);
+  return res.sendStatus(201);
 };
 
 const token = async (req, res) => {
