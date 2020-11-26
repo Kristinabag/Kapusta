@@ -34,6 +34,7 @@ router
     const {
       activityFor, weatherFor, temperatureFor, wardrobeType, user,
     } = req.body;
+    console.log(activityFor, weatherFor, temperatureFor, wardrobeType, user);
     if (user && user.name && wardrobeType === 'myWardrobe') {
       const clothes = await ClothingItem.find({
         // user: user._id,
@@ -51,7 +52,7 @@ router
         weatherFor,
         temperatureFor,
       });
-      console.log('clothes: ', clothes);
+      
       res.json(clothes);
     }
   })

@@ -1,7 +1,12 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const ClothingItem = require('./models/clothingItem');
 
-mongoose.connect('mongodb://localhost:27017/kapusta');
+mongoose.connect(process.env.DB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 
 async function seedBase() {
   const clothes = [
@@ -140,6 +145,14 @@ async function seedBase() {
       temperatureFor: ['hot', 'warm', 'cold', 'freeze', 'extraFreeze'],
       activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
       imgUrl: './img/glassesRound.png',
+    }),
+    new ClothingItem({
+      name: 'umbrella',
+      type: 'accessory-umbrella',
+      weatherFor: ['rain'],
+      temperatureFor: ['hot', 'warm', 'cold', 'freeze'],
+      activityFor: ['work-office', 'work-informal', 'leasure-goingout', 'leasure-walking'],
+      imgUrl: './img/umbrella.png',
     }),
     new ClothingItem({
       name: 'scarf',
@@ -502,7 +515,7 @@ async function seedBase() {
     }),
   ];
 
-  await mongoose.connection.dropDatabase();
+  // await mongoose.connection.dropDatabase();
   await ClothingItem.insertMany(clothes);
   await mongoose.disconnect();
 }
