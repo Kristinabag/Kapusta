@@ -34,24 +34,21 @@ router
     const {
       activityFor, weatherFor, temperatureFor, wardrobeType, user,
     } = req.body;
-    if (user && user.name && wardrobeType === 'myWardrobe') {
+    if (user.name && wardrobeType === 'myWardrobe') {
       const clothes = await ClothingItem.find({
-        // user: user._id,
         user: user.name,
         activityFor,
         weatherFor,
         temperatureFor,
       });
-      console.log('clothes: ', clothes);
       res.json(clothes);
-    } else if (user && wardrobeType === 'default') {
+    } else if (wardrobeType === 'default') {
       const clothes = await ClothingItem.find({
         user: 'defaultUser',
         activityFor,
         weatherFor,
         temperatureFor,
       });
-      console.log('clothes: ', clothes);
       res.json(clothes);
     }
   })
@@ -60,10 +57,8 @@ router
       const {
         user, name, type, activityFor, temperatureFor, weatherFor, layer,
       } = req.body;
-      console.log(req.body);
       const dbUser = await User.findOne({ name: JSON.parse(user).name });
       const cloth = new ClothingItem({
-        // user: dbUser._id,
         user: dbUser.name,
         name,
         type,
