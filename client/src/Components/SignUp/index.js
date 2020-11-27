@@ -99,7 +99,6 @@ function SignUp() {
     <>
       <div className="form">
         <form onSubmit={handlerSubmit} className="signup">
-          <legend><h2>Registration</h2></legend>
           <input onChange={handlerEmail} value={email} type="email" className={`${emailStyle} form-control`} placeholder="Введите свой email" />
           {existingEmail && <div className={`${style.existingEmail} invalid-feedback`}>Sorry, the email already exists. Try another?</div>}
           <input onChange={handlerName} value={name} type="text" className={`${nameStyle} form-control`} placeholder="Введите свое имя" />

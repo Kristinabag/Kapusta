@@ -19,7 +19,7 @@ function Header() {
   return (
     <div className="header">
       <div className="d-flex">
-        <Link className="navbar-brand" to="/">Главная</Link>
+        <Link className="navbar-brand" to="/">Kapusta</Link>
       </div>
       {user.name
         ? (

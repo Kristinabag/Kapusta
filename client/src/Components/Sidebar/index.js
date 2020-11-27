@@ -16,7 +16,7 @@ function Sidebar() {
       <div className="sidebar">
         <ul className="list-group list-group-flush">
           <AutocompleteInput />
-          <button type="button" onClick={() => dispatch(renewToggle())} className="list-group-item navLink">
+          <button type="button" onClick={() => dispatch(renewToggle())} className="list-group-item navLink update">
             <FiIcons.FiRefreshCcw />
             <span> Обновить вещи</span>
           </button>

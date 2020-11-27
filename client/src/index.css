@@ -4,14 +4,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Courier, Verdana, sans-serif;
-  min-width: 1550px;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-width: 1550px;
 
 }
 
@@ -23,7 +21,6 @@ body {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: rgba(99, 110, 114,1.0);
-  min-width: 1550px;
 }
 
 .weather { 
@@ -34,13 +31,11 @@ body {
   padding: 5px;
   color: rgba(99, 110, 114,1.0);
   margin-bottom: 10px;
-  min-width: 1550px;
 }
 
 .containerMain {
   flex-grow: 1;
   display: flex;
-  min-width: 1550px;
 }
 
 .footer {
@@ -51,21 +46,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 1550px;
-}
-
-
-/* .Clothes {
-  flex-grow:1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.sidebar {
-  left: 0;
-  max-width: 20%;
-  height: 400px;
+  height: 40px;
 }
 
 .navLink {
@@ -75,5 +56,44 @@ body {
 .navLink:hover {
   text-decoration: none;
   background-color: #ecf0f1;
-} */
+} 
 
+.form {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  height: fit-content;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  height: fit-content;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
+.signup input {
+  margin-bottom: 5px;
+}
+
+.signin input {
+  margin-bottom: 5px;
+}

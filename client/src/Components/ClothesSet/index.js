@@ -138,7 +138,7 @@ function ClothesTop({ clothes }) {
                   {bottom[0] && <img src={bottom[0].imgUrl} alt={bottom[0].name} />}
                   {bottom[1] && <img src={bottom[1].imgUrl} alt={bottom[1].name} />}
                 </div>
-                <div className="d-flex justify-content-between shoose">
+                <div className="d-flex justify-content-center shoes">
                   {shoes[0] && <img src={shoes[0].imgUrl} alt={shoes[0].name} />}
                   {shoes[1] && <img src={shoes[1].imgUrl} alt={shoes[1].name} />}
                 </div>

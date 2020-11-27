@@ -1,43 +1,87 @@
+.clothes {
+  display: flex;
+  height: 100%;
+}
+
 .accessories {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.377);
+  max-width: 600px;
   margin-right: 10px;
 }
 
 .clothingSet {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.377);
+  max-width: 600px;
 }
 
 .imgContainer {
-  flex-grow: 1;
+  height: 95%;
 }
 
 .headItem img {
-  max-height: 100px;
-  min-width: auto;
+  object-fit: contain;
+  min-width: 0;
 }
 
 .bodyClothes img {
-  max-height: 200px;
-  width: auto;
+  object-fit: contain;
+  min-width: 0;
+  flex: 0 1 100%;
 }
 
 .pant img {
-  max-height: 300px;
-  width: auto;
+  object-fit: contain;
+  min-width: 0;
+  flex: 0 1 100%;
 }
 
-.shoose img {
-  max-height: 150px;
-  width: auto;
+.shoes img {
+  object-fit: contain;
+  min-width: 0;
+  flex: 0 1 100%;
+}
+
+.headItem {
+  height: 15%;
+  width: 200px;
+  justify-content: center;
+}
+
+.bodyClothes {
+  height: 30%;
+  max-width: 600px;
+}
+
+.pant {
+  height: 30%;
+  max-width: 600px;
+  width: 300px;
+}
+
+.shoes {
+  height: 15%;
+  max-width: 600px;
+  width: 200px;
+}
+
+.accessoriesDiv {
+  flex-grow: 1;
+  justify-content: center;
+  height: 15%;
+  max-width: 600px;
+
 }
 
 .accessoriesDiv img {
-  max-height: 150px;
-  width: auto;
+
 }
