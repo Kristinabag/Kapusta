@@ -22,6 +22,7 @@
   align-items: center;
   background-color: rgba(255, 255, 255, 0.377);
   max-width: 600px;
+
 }
 
 .imgContainer {
@@ -75,13 +76,20 @@
 }
 
 .accessoriesDiv {
-  flex-grow: 1;
-  justify-content: center;
-  height: 15%;
+  height: 80%;
   max-width: 600px;
-
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .accessoriesDiv img {
+  object-fit: contain;
+height: 100px;
+}
 
+.fontText {
+  font-family: Courier, Verdana, sans-serif;
+  padding: 5px;
 }

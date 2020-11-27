@@ -113,14 +113,14 @@ function ClothesTop({ clothes }) {
           <div className="clothes">
 
             <div className="accessories">
-              <h4>Accessories</h4>
+              <h4 className="fontText">Аксессуары</h4>
               <div className="d-flex flex-column align-items-center accessoriesDiv">
                 {accessory[0] && <img src={accessory[0].imgUrl} alt={accessory[0].name} />}
                 {accessory[1] && <img src={accessory[1].imgUrl} alt={accessory[1].name} />}
               </div>
             </div>
             <div className="clothingSet">
-              <h4>Clothing Set</h4>
+              <h4 className="fontText">Набор одежды</h4>
               <div className="d-flex flex-column align-items-center imgContainer">
                 <div className="d-flex justify-content-center headItem">
                   {hat && <img src={hat.imgUrl} alt={hat.name} />}
