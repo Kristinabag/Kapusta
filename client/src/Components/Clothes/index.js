@@ -22,14 +22,23 @@ function Clothes() {
       const temperature = weather.main.temp;
       const weatherId = weather.weather[0].id;
 
-      const weathType = weatherId >= 200 && weatherId <= 531 ? 'rain'
-        : weatherId >= 600 && weatherId <= 622 ? 'snow'
-          : weatherId === 800 ? 'clear' : 'clouds';
+      const weathType = weatherId >= 200 && weatherId <= 531
+        ? 'rain'
+        : weatherId >= 600 && weatherId <= 622
+          ? 'snow'
+          : weatherId === 800
+            ? 'clear'
+            : 'clouds';
 
-      const tempType = temperature < -20 ? 'extraFreeze'
-        : temperature >= -20 && temperature < 1 ? 'freeze'
-          : temperature >= 1 && temperature < 11 ? 'cold'
-            : temperature >= 11 && temperature < 21 ? 'warm' : 'hot';
+      const tempType = temperature < -20
+        ? 'extraFreeze'
+        : temperature >= -20 && temperature < 0
+          ? 'freeze'
+          : temperature >= 0 && temperature < 11
+            ? 'cold'
+            : temperature >= 11 && temperature < 21
+              ? 'warm'
+              : 'hot';
 
       setWeatherType(weathType);
       setTemperatureType(tempType);
@@ -38,10 +47,17 @@ function Clothes() {
 
   useEffect(() => {
     if (temperatureType && weatherType) {
-      dispatch(loadClothesSaga([activity, temperatureType, weatherType, wardrobeType, user]));
+      dispatch(
+        loadClothesSaga([
+          activity,
+          temperatureType,
+          weatherType,
+          wardrobeType,
+          user,
+        ]),
+      );
     }
-  },
-  [activity, dispatch, temperatureType, weatherType, wardrobeType]);
+  }, [activity, dispatch, temperatureType, weatherType, wardrobeType]);
 
   return (
     <>

@@ -32,9 +32,9 @@ function Wardrobe() {
 
       const tempType = temperature < -20
         ? 'extraFreeze'
-        : temperature >= -20 && temperature < 1
+        : temperature >= -20 && temperature < 0
           ? 'freeze'
-          : temperature >= 1 && temperature < 11
+          : temperature >= 0 && temperature < 11
             ? 'cold'
             : temperature >= 11 && temperature < 21
               ? 'warm'
