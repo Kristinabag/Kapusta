@@ -3,7 +3,7 @@ import style from './style.module.css';
 
 function Footer() {
   return (
-    <div className={`${style.footer}`}>
+    <div className="footer">
       <div>
         &copy; 2020
         {' '}

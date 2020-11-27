@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeClothesLoader } from '../../redux/actions/loader';
 import ClothesLoader from '../Loader/ClothesLoader';
+import './style.css';
 
 function ClothesTop({ clothes }) {
   /* all states neccessary for rendering clothes */
@@ -109,23 +110,23 @@ function ClothesTop({ clothes }) {
       {
       loaders.clothes ? <ClothesLoader />
         : clothes?.length ? (
-          <div className="d-flex justify-content-between">
+          <div className="clothes">
 
-            <div className="d-flex flex-column align-items-center mx-2">
+            <div className="accessories">
               <h4>Accessories</h4>
-              <div className="d-flex flex-column align-items-center">
+              <div className="d-flex flex-column align-items-center accessoriesDiv">
                 {accessory[0] && <img src={accessory[0].imgUrl} alt={accessory[0].name} />}
                 {accessory[1] && <img src={accessory[1].imgUrl} alt={accessory[1].name} />}
               </div>
             </div>
-            <div className="d-flex flex-column align-items-center mx-2">
+            <div className="clothingSet">
               <h4>Clothing Set</h4>
-              <div className="d-flex flex-column align-items-center">
-                <div className="d-flex justify-content-center">
+              <div className="d-flex flex-column align-items-center imgContainer">
+                <div className="d-flex justify-content-center headItem">
                   {hat && <img src={hat.imgUrl} alt={hat.name} />}
                   {scarf && <img src={scarf.imgUrl} alt={scarf.name} />}
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center bodyClothes">
                   {top[0] && <img src={top[0].imgUrl} alt={top[0].name} />}
                   {top[1] && <img src={top[1].imgUrl} alt={top[1].name} />}
                   {top[2] && <img src={top[2].imgUrl} alt={top[2].name} />}
@@ -133,11 +134,11 @@ function ClothesTop({ clothes }) {
                   {top[4] && <img src={top[4].imgUrl} alt={top[4].name} />}
                   {top[5] && <img src={top[5].imgUrl} alt={top[5].name} />}
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center pant">
                   {bottom[0] && <img src={bottom[0].imgUrl} alt={bottom[0].name} />}
                   {bottom[1] && <img src={bottom[1].imgUrl} alt={bottom[1].name} />}
                 </div>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-center shoes">
                   {shoes[0] && <img src={shoes[0].imgUrl} alt={shoes[0].name} />}
                   {shoes[1] && <img src={shoes[1].imgUrl} alt={shoes[1].name} />}
                 </div>

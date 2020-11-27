@@ -3,28 +3,50 @@ body {
   background-image: url(https://cdn.pixabay.com/photo/2019/09/20/06/01/watercolor-background-4490904_1280.jpg);
   background-repeat: repeat;
   background-size: cover;
-  height: 100vh;
   font-family: Courier, Verdana, sans-serif;
 }
 
 #root {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+
 }
 
-
-.Clothes {
-  flex-grow:1;
+.header {
+  background-color: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(99, 110, 114,1.0);
 }
 
+.weather { 
+  background-color:rgba(236, 240, 241, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: rgba(99, 110, 114,1.0);
+  margin-bottom: 10px;
+}
 
-.sidebar {
-  left: 0;
-  max-width: 20%;
-  height: 400px;
+.containerMain {
+  flex-grow: 1;
+  display: flex;
+}
+
+.footer {
+  width: 100%;
+  background-color:rgba(236, 240, 241,0.7);
+  font-size: 20px;
+  font-family: Courier, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
 }
 
 .navLink {
@@ -34,24 +56,44 @@ body {
 .navLink:hover {
   text-decoration: none;
   background-color: #ecf0f1;
-}
+} 
 
 .form {
-  flex-grow:10;
   display: flex;
+  flex-grow: 1;
   justify-content: center;
-  text-align: center;
+  flex-direction: column;
   align-items: center;
 }
 
+.signin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  height: fit-content;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+
 .signup {
-  width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  height: fit-content;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.404);
 }
 
 .signup input {
-  margin: 10px;
+  margin-bottom: 5px;
 }
 
-.signup button {
-  width: 250px;
+.signin input {
+  margin-bottom: 5px;
 }

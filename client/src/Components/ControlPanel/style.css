@@ -1,6 +1,5 @@
 .card {
   font-size: 20px;
-  max-width: 20vw;
 }
 
 .nav-link {
@@ -10,3 +9,9 @@
 .visible {
   opacity: 0.5;
 }
+
+.ControlPanel {
+  padding: 10px;
+  max-width: 350px;
+}
+

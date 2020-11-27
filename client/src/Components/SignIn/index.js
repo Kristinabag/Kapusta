@@ -76,8 +76,7 @@ function SignIn() {
   return (
     <>
       <div className="form">
-        <form onSubmit={handlerSubmit} className="signup">
-          <legend><h2>Login</h2></legend>
+        <form onSubmit={handlerSubmit} className="signin">
           <input onChange={handlerEmail} value={email} type="email" className={`form-control ${emailStyle}`} placeholder="Введите свой email" />
           <input onChange={handlerPass} value={pass} type="password" className={`form-control ${passStyle}`} placeholder="Введите пароль" />
           <div className="invalid-feedback">

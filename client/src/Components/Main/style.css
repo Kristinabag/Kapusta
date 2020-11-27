@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-grow: 1;
+  padding: 10px;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+
+

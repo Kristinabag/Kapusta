@@ -15,26 +15,26 @@ function App() {
       <Router>
         <Header />
         <Weather />
+        <div className="containerMain">
+          <Switch>
+            <Route exact path="/signin">
+              <SignIn />
+            </Route>
+
+            <Route exact path="/signup">
+              <SignUp />
+            </Route>
+
+            <Route exact path="/contacts">
+              <Contacts />
+            </Route>
+
+            <Route path="/">
+              <Main />
+            </Route>
+          </Switch>
+        </div>
         <Footer />
-
-        <Switch>
-          <Route exact path="/signin">
-            <SignIn />
-          </Route>
-
-          <Route exact path="/signup">
-            <SignUp />
-          </Route>
-
-          <Route exact path="/contacts">
-            <Contacts />
-          </Route>
-
-          <Route path="/">
-            <Main />
-          </Route>
-
-        </Switch>
       </Router>
       <BGImage />
     </>

@@ -107,8 +107,8 @@ function Contacts() {
       )}
       {/* contact component itself */}
       <div className={style.contacts}>
-        <h1>Contact Us</h1>
-        <form className="d-flex flex-column justify-content-center" onSubmit={sendEmail}>
+        {/* <h1>Связаться с нами</h1> */}
+        <form className="d-flex flex-column justify-content-center form" onSubmit={sendEmail}>
           <input onChange={nameHandler} value={name} type="text" className={`form-control ${nameStyle} my-1`} placeholder="Введите имя ..." name="name" />
           <input onChange={emailHandler} value={email} type="email" className={`form-control ${emailStyle} my-1`} placeholder="Электронная почта ..." name="email" />
           <input onChange={subjectHandler} value={subject} type="text" className={`form-control ${subjectStyle} my-1`} placeholder="Тема ..." name="subject" />
@@ -121,7 +121,7 @@ function Contacts() {
               Заполните, пожалуйста, все поля ...
             </div>
           </div>
-          <button type="submit" className="btn btn-primary my-1">Submit</button>
+          <button type="submit" className="btn btn-primary my-1">Отправить</button>
         </form>
       </div>
     </>

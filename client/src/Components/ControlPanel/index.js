@@ -67,7 +67,7 @@ function ControlPanel() {
       <div className="ControlPanel">
         {user.name ? (
           <>
-            <div className="card border-primary mb-3">
+            <div className="card border-primary mb-3 sizeControl">
               <div className="card-header">Типа активности</div>
               <div className="card-body">
                 <select
@@ -105,7 +105,7 @@ function ControlPanel() {
                 </select>
               </div>
             </div>
-            <div className="card border-dark mb-3">
+            <div className="card border-dark mb-3 sizeControl">
               <div className="card-header">Одежда</div>
               <div className="card-body">
                 <select

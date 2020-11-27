@@ -1,2 +1,21 @@
+.sidebar {
+  padding-right: 10px;
+  min-width: 200px;
+  height: 80vh;
+}
 
+.sidebar ul {
+  width: 100%;
+}
 
+.sidebar ul div {
+  width: 100%;
+}
+
+.sidebar ul div input {
+  width: 100%;
+}
+
+.update {
+  text-align: left;
+}
