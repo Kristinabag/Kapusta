@@ -12,6 +12,9 @@ Before running this app, run the seeder.
 node seed.js
 ```
 
+## Libraries and frameworks
+![img with used libraries and frameworks](https://i.ibb.co/DWdxgWN/Screenshot-from-2020-11-30-17-18-50.png)
+
 ## Roadmap
 
 Deployment on Heroku is in process ...
