@@ -12,6 +12,10 @@ Before running this app, run the seeder.
 node seed.js
 ```
 
+## Main page and styles
+![main page](https://i.ibb.co/rQZpK9m/Screenshot-from-2020-11-30-17-39-41.png)
+
+
 ## Libraries and frameworks
 ![img with used libraries and frameworks](https://i.ibb.co/DWdxgWN/Screenshot-from-2020-11-30-17-18-50.png)
 
