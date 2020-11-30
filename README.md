@@ -23,5 +23,10 @@ Deployment on Heroku is in process ...
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Authors
+[Kristina Bagrova](https://github.com/Kristinabag)
+[Andrey Belookiy](https://github.com/belooki)
+[Burbu Kuular](https://github.com/akimberl)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
